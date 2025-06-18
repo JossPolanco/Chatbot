@@ -564,7 +564,7 @@ const Geografia = [
 
 const Filosofia = [
     {
-        subthemes: "etica",
+        subtheme: "etica",
         title: "Ética - Estudio de la Moral y el Comportamiento",
         description: "La ética es la rama de la filosofía que estudia los principios morales, el bien y el mal, y cómo debemos comportarnos en sociedad",
         questions: [
@@ -586,7 +586,7 @@ const Filosofia = [
         ]
     },
     {
-        subthemes: "existencialismo",
+        subtheme: "existencialismo",
         title: "Existencialismo - La Existencia Precede a la Esencia",
         description: "Corriente filosófica que enfatiza la existencia individual, la libertad de elección y la responsabilidad personal en la creación del significado de la vida",
         questions: [
@@ -608,7 +608,7 @@ const Filosofia = [
         ]
     },
     {
-        subthemes: "nihilismo",
+        subtheme: "nihilismo",
         title: "Nihilismo - La Negación del Significado y los Valores",
         description: "Doctrina filosófica que sostiene que la vida carece de significado objetivo, propósito o valores intrínsecos fundamentales",
         questions: [
@@ -630,7 +630,7 @@ const Filosofia = [
         ]
     },
     {
-        subthemes: "filosofia_moral",
+        subtheme: "filosofia_moral",
         title: "Filosofía Moral - Fundamentos del Bien y la Justicia",
         description: "Rama de la filosofía que examina los principios fundamentales de la moralidad, la justicia y el comportamiento ético correcto",
         questions: [
@@ -652,7 +652,7 @@ const Filosofia = [
         ]
     },
     {
-        subthemes: "estetica",
+        subtheme: "estetica",
         title: "Estética - La Filosofía del Arte y la Belleza",
         description: "Rama de la filosofía que estudia la naturaleza de la belleza, el arte, la experiencia estética y los juicios de gusto",
         questions: [
@@ -674,7 +674,7 @@ const Filosofia = [
         ]
     },
     {
-        subthemes: "realidad",
+        subtheme: "realidad",
         title: "Realidad - La Naturaleza de lo que Existe",
         description: "Investigación filosófica sobre la naturaleza fundamental de la realidad, lo que existe y cómo podemos conocerlo",
         questions: [
@@ -696,7 +696,7 @@ const Filosofia = [
         ]
     },
     {
-        subthemes: "metafisica",
+        subtheme: "metafisica",
         title: "Metafísica - El Estudio del Ser y la Realidad Fundamental",
         description: "Rama de la filosofía que investiga la naturaleza fundamental de la realidad, incluyendo la relación entre mente y materia, sustancia y atributo, causa y efecto",
         questions: [
@@ -721,7 +721,7 @@ const Filosofia = [
 
 const programacion = [
     {
-        subthemes: "conceptos_basicos",
+        subtheme: "conceptos_basicos",
         title: "Conceptos Básicos de Programación",
         description: "Fundamentos esenciales de la programación incluyendo variables, tipos de datos, funciones y paradigmas de programación",
         questions: [
@@ -758,7 +758,7 @@ const programacion = [
         ]
     },
     {
-        subthemes: "condicionales",
+        subtheme: "condicionales",
         title: "Estructuras Condicionales",
         description: "Control de flujo mediante condiciones, incluyendo if, else, switch y operadores lógicos para toma de decisiones en programas",
         questions: [
@@ -795,7 +795,7 @@ const programacion = [
         ]
     },
     {
-        subthemes: "bucles",
+        subtheme: "bucles",
         title: "Estructuras de Repetición (Bucles)",
         description: "Ciclos y loops para repetir código incluyendo for, while, do-while y control de iteraciones",
         questions: [
@@ -832,7 +832,7 @@ const programacion = [
         ]
     },
     {
-        subthemes: "conceptos_backend",
+        subtheme: "conceptos_backend",
         title: "Conceptos de Backend",
         description: "Desarrollo del lado del servidor incluyendo APIs, bases de datos, autenticación, servidores y arquitecturas backend",
         questions: [
@@ -869,7 +869,7 @@ const programacion = [
         ]
     },
     {
-        subthemes: "frontend",
+        subtheme: "frontend",
         title: "Desarrollo FrontEnd",
         description: "Este subtema abarca los aspectos esenciales del desarrollo del lado del cliente, como HTML, CSS, JavaScript y frameworks relacionados.",
         questions: [
@@ -901,7 +901,7 @@ const programacion = [
         ]
     },
     {
-        subthemes: "bases_datos",
+        subtheme: "bases_datos",
         title: "Bases de Datos",
         description: "Este subtema cubre los conceptos fundamentales sobre bases de datos, sus tipos y cómo se utilizan para almacenar y gestionar información.",
         questions: [
@@ -933,7 +933,7 @@ const programacion = [
         ]
     },
     {
-        subthemes: "algoritmos",
+        subtheme: "algoritmos",
         title: "Algoritmos en Programación",
         description: "Este subtema aborda el concepto de algoritmos, su utilidad en la resolución de problemas y ejemplos comunes.",
         questions: [
@@ -966,38 +966,1690 @@ const programacion = [
     }
 ]
 
-const Astronomia = {
+const Astronomia = [
+    {
+        subtheme: "nebulosas",
+        title: "Nebulosas",
+        description: "Este subtema trata sobre las nebulosas, sus tipos, composición y el papel que juegan en la formación estelar.",
+        questions: [
+            {
+                question: "¿Qué es una nebulosa?",
+                answerd: "Una nebulosa es una gran nube de gas y polvo en el espacio, donde pueden formarse nuevas estrellas. Algunas nebulosas también son restos de estrellas que han explotado.",
+                keywords: ["nebulosa", "gas", "polvo", "formación estelar", "explosión estelar"]
+            },
+            {
+                question: "¿Qué tipos de nebulosas existen?",
+                answerd: "Existen varios tipos: nebulosas de emisión (brillan por la energía de estrellas cercanas), de reflexión (reflejan la luz), oscuras (bloquean la luz) y planetarias (restos de estrellas moribundas).",
+                keywords: ["tipos de nebulosas", "emisión", "reflexión", "planetarias", "oscuras"]
+            },
+            {
+                question: "¿Dónde se encuentran las nebulosas?",
+                answerd: "Las nebulosas se encuentran dispersas por toda la galaxia, principalmente en las regiones donde se están formando nuevas estrellas, como los brazos espirales de la Vía Láctea.",
+                keywords: ["ubicación nebulosas", "vía láctea", "brazos espirales"]
+            },
+            {
+                question: "¿Qué es la Nebulosa de Orión?",
+                answerd: "La Nebulosa de Orión es una de las más brillantes y cercanas a la Tierra. Se encuentra en la constelación de Orión y es una región activa de formación estelar.",
+                keywords: ["nebulosa de orión", "orión", "formación estelar"]
+            },
+            {
+                question: "¿Cómo se observan las nebulosas?",
+                answerd: "Las nebulosas se observan con telescopios que captan luz visible, infrarroja o incluso radioondas. Las imágenes procesadas revelan colores según su composición química.",
+                keywords: ["observación", "telescopio", "infrarrojo", "radio", "color"]
+            }
+        ]
+    },
+    {
+        subtheme: "galaxias",
+        title: "Galaxias",
+        description: "Este subtema explica qué son las galaxias, sus tipos, estructura y su importancia en el universo.",
+        questions: [
+            {
+                question: "¿Qué es una galaxia?",
+                answerd: "Una galaxia es un conjunto masivo de estrellas, gas, polvo y materia oscura unidos por gravedad. Pueden contener desde millones hasta billones de estrellas.",
+                keywords: ["galaxia", "estrellas", "gravedad", "materia oscura"]
+            },
+            {
+                question: "¿Cuáles son los tipos principales de galaxias?",
+                answerd: "Las galaxias se clasifican principalmente en espirales, elípticas e irregulares. Las espirales tienen brazos, las elípticas tienen forma ovalada y las irregulares no tienen forma definida.",
+                keywords: ["galaxias espirales", "elípticas", "irregulares", "clasificación"]
+            },
+            {
+                question: "¿Qué es la Vía Láctea?",
+                answerd: "La Vía Láctea es la galaxia en la que se encuentra el sistema solar. Es una galaxia espiral con un diámetro de aproximadamente 100,000 años luz.",
+                keywords: ["vía láctea", "sistema solar", "galaxia espiral"]
+            },
+            {
+                question: "¿Cómo se forman las galaxias?",
+                answerd: "Las galaxias se formaron a partir de nubes de gas y materia oscura que colapsaron por gravedad tras el Big Bang. Con el tiempo, estas regiones formaron estrellas y estructuras galácticas.",
+                keywords: ["formación galaxias", "big bang", "gravedad", "materia oscura"]
+            },
+            {
+                question: "¿Qué son las colisiones galácticas?",
+                answerd: "Son encuentros entre galaxias donde sus campos gravitacionales interactúan. Esto puede deformarlas y desencadenar formación de estrellas. La Vía Láctea colisionará con Andrómeda en unos 4 mil millones de años.",
+                keywords: ["colisiones", "andrómeda", "interacción galáctica"]
+            }
+        ]
+    },
+    {
+        subtheme: "planetas",
+        title: "Planetas del Sistema Solar",
+        description: "Este subtema aborda qué son los planetas, su clasificación, características principales y su papel en el sistema solar.",
+        questions: [
+            {
+                question: "¿Qué es un planeta?",
+                answerd: "Un planeta es un cuerpo celeste que orbita una estrella, tiene suficiente masa para tener forma esférica y ha limpiado su órbita de otros objetos.",
+                keywords: ["planeta", "órbita", "forma esférica", "definición"]
+            },
+            {
+                question: "¿Cuántos planetas hay en el sistema solar?",
+                answerd: "El sistema solar tiene ocho planetas: Mercurio, Venus, Tierra, Marte, Júpiter, Saturno, Urano y Neptuno. Plutón fue reclasificado como planeta enano en 2006.",
+                keywords: ["planetas", "sistema solar", "plutón", "clasificación"]
+            },
+            {
+                question: "¿Cuál es la diferencia entre planetas terrestres y gaseosos?",
+                answerd: "Los planetas terrestres (Mercurio a Marte) tienen superficie sólida y son más pequeños. Los gaseosos (Júpiter a Neptuno) son más grandes y están compuestos principalmente de gases.",
+                keywords: ["terrestres", "gaseosos", "tipos de planetas"]
+            },
+            {
+                question: "¿Qué características tiene la Tierra como planeta?",
+                answerd: "La Tierra tiene agua en estado líquido, atmósfera con oxígeno, clima variado y vida. Su distancia del Sol permite condiciones habitables.",
+                keywords: ["tierra", "planeta habitable", "agua", "vida"]
+            },
+            {
+                question: "¿Qué es un planeta enano?",
+                answerd: "Un planeta enano es un cuerpo celeste que orbita el Sol, tiene forma esférica, pero no ha limpiado su órbita. Ejemplos: Plutón, Ceres y Eris.",
+                keywords: ["planeta enano", "plutón", "órbita", "definición"]
+            }
+        ]
+    },
+    {
+        subtheme: "constelaciones",
+        title: "Constelaciones",
+        description: "Este subtema describe qué son las constelaciones, sus tipos, origen cultural y ejemplos destacados.",
+        questions: [
+            {
+                question: "¿Qué es una constelación?",
+                answerd: "Una constelación es un grupo de estrellas que forma una figura imaginaria en el cielo nocturno, muchas veces basada en mitología o animales.",
+                keywords: ["constelación", "estrellas", "figuras", "mitología"]
+            },
+            {
+                question: "¿Cuántas constelaciones hay oficialmente?",
+                answerd: "La Unión Astronómica Internacional reconoce 88 constelaciones oficiales que cubren toda la esfera celeste.",
+                keywords: ["88 constelaciones", "oficiales", "cielo"]
+            },
+            {
+                question: "¿Qué constelaciones son visibles desde el hemisferio norte?",
+                answerd: "Algunas visibles desde el hemisferio norte son Orión, Casiopea, Osa Mayor, Osa Menor y Draco.",
+                keywords: ["hemisferio norte", "visibilidad", "orión", "osa mayor"]
+            },
+            {
+                question: "¿Qué constelación contiene la Estrella Polar?",
+                answerd: "La Estrella Polar se encuentra en la constelación de la Osa Menor y es utilizada para ubicar el norte celeste.",
+                keywords: ["estrella polar", "osa menor", "norte", "navegación"]
+            },
+            {
+                question: "¿Para qué se usaban las constelaciones en la antigüedad?",
+                answerd: "Servían como herramientas para la navegación, la agricultura y la creación de calendarios basados en el movimiento estelar.",
+                keywords: ["uso antiguo", "navegación", "calendario", "agricultura"]
+            }
+        ]
+    },
+    {
+        subtheme: "cometas",
+        title: "Cometas",
+        description: "Este subtema explora los cometas, su composición, origen y comportamiento al acercarse al Sol.",
+        questions: [
+            {
+                question: "¿Qué es un cometa?",
+                answerd: "Un cometa es un pequeño cuerpo celeste compuesto principalmente de hielo, polvo y rocas. Al acercarse al Sol, libera gas y polvo, formando una coma y una cola brillante.",
+                keywords: ["cometa", "hielo", "cola", "coma", "sol"]
+            },
+            {
+                question: "¿De dónde vienen los cometas?",
+                answerd: "La mayoría provienen del Cinturón de Kuiper y de la Nube de Oort, regiones distantes del sistema solar.",
+                keywords: ["origen", "cinturón de kuiper", "nube de oort"]
+            },
+            {
+                question: "¿Cuál es el cometa más famoso?",
+                answerd: "El cometa Halley es el más conocido. Es periódico y visible desde la Tierra cada 76 años aproximadamente.",
+                keywords: ["cometa halley", "famoso", "visible", "periódico"]
+            },
+            {
+                question: "¿Qué es la coma de un cometa?",
+                answerd: "La coma es una nube de gas y polvo que rodea el núcleo del cometa cuando se calienta por el Sol.",
+                keywords: ["coma", "nube", "gas", "núcleo"]
+            },
+            {
+                question: "¿Qué diferencia a un cometa de un asteroide?",
+                answerd: "Los cometas tienen una composición más helada y desarrollan colas cuando se acercan al Sol. Los asteroides son más rocosos y no presentan colas.",
+                keywords: ["cometa vs asteroide", "composición", "cola"]
+            }
+        ]
+    },
+]
 
-}
+const CulturaFriky = [
+    {
+        subtheme: "anime",
+        title: "Anime",
+        description: "Este subtema explora el anime como forma de animación japonesa, su historia, géneros y relevancia cultural.",
+        questions: [
+            {
+                question: "¿Qué es el anime?",
+                answerd: "El anime es un estilo de animación originado en Japón, caracterizado por sus tramas complejas, personajes expresivos y variedad de géneros. Se produce para público infantil, adolescente y adulto.",
+                keywords: ["anime", "animación japonesa", "géneros", "historia"]
+            },
+            {
+                question: "¿Cuál es la diferencia entre anime y caricatura?",
+                answerd: "Aunque ambos son animaciones, el anime suele tener narrativas más profundas, estilos visuales detallados y una fuerte carga cultural japonesa, mientras que las caricaturas suelen ser más simples y humorísticas.",
+                keywords: ["diferencias", "anime vs caricatura", "estilo", "cultura japonesa"]
+            },
+            {
+                question: "¿Cuáles son los géneros más populares en el anime?",
+                answerd: "Algunos géneros populares son shōnen (acción juvenil), shōjo (romance juvenil), seinen (adultos), mecha (robots), isekai (mundos paralelos) y slice of life (vida cotidiana).",
+                keywords: ["géneros anime", "shonen", "shojo", "mecha", "isekai"]
+            },
+            {
+                question: "¿Qué impacto ha tenido el anime a nivel global?",
+                answerd: "El anime ha influido fuertemente en la cultura pop global, expandiendo el interés por el idioma japonés, el cosplay, el manga y la animación como forma artística y narrativa seria.",
+                keywords: ["impacto global", "cultura pop", "idioma japonés", "influencia"]
+            },
+            {
+                question: "¿Cuáles son algunos animes considerados clásicos?",
+                answerd: "Series como 'Dragon Ball', 'Naruto', 'Neon Genesis Evangelion', 'Sailor Moon' y 'Akira' son clásicos que marcaron generaciones por su historia y estilo visual.",
+                keywords: ["animes clásicos", "dragon ball", "naruto", "evangelion", "akira"]
+            }
+        ]
+    },
+    {
+        subtheme: "mangas",
+        title: "Mangas",
+        description: "Este subtema trata sobre los mangas, su estructura, publicación y relación con el anime.",
+        questions: [
+            {
+                question: "¿Qué es un manga?",
+                answerd: "Un manga es un cómic japonés que se lee de derecha a izquierda. Puede abordar diversos géneros y públicos, desde niños hasta adultos, y suele ser en blanco y negro.",
+                keywords: ["manga", "cómic japonés", "lectura", "géneros"]
+            },
+            {
+                question: "¿Cuál es la diferencia entre manga y anime?",
+                answerd: "El manga es la versión impresa (cómic), mientras que el anime es la versión animada. Muchas veces, el anime se basa directamente en un manga.",
+                keywords: ["manga vs anime", "adaptación", "impreso", "animado"]
+            },
+            {
+                question: "¿Cómo se publica un manga en Japón?",
+                answerd: "Primero se publica por capítulos en revistas semanales o mensuales como 'Shonen Jump'. Si es exitoso, se recopilan en tomos llamados 'tankōbon'.",
+                keywords: ["publicación", "revistas", "shonen jump", "tankobon"]
+            },
+            {
+                question: "¿Qué géneros existen dentro del manga?",
+                answerd: "Hay muchos géneros: shōnen, shōjo, seinen, josei, yaoi, yuri, horror, fantasía, ciencia ficción, entre otros.",
+                keywords: ["géneros manga", "shonen", "seinen", "josei", "yaoi"]
+            },
+            {
+                question: "¿Cuáles son algunos mangas populares?",
+                answerd: "'One Piece', 'Attack on Titan', 'Death Note', 'Bleach' y 'My Hero Academia' son ejemplos de mangas populares tanto en Japón como internacionalmente.",
+                keywords: ["mangas populares", "one piece", "attack on titan", "death note"]
+            }
+        ]
+    },
+    {
+        subtheme: "videojuegos",
+        title: "Videojuegos",
+        description: "Este subtema aborda la historia, géneros, impacto social y evolución de los videojuegos.",
+        questions: [
+            {
+                question: "¿Qué es un videojuego?",
+                answerd: "Un videojuego es un software interactivo que permite al usuario controlar acciones en un entorno digital, con fines de entretenimiento, educación o competencia.",
+                keywords: ["videojuego", "interactivo", "software", "entretenimiento"]
+            },
+            {
+                question: "¿Cuáles son los principales géneros de videojuegos?",
+                answerd: "Entre los géneros más comunes están: acción, aventura, estrategia, deportes, simulación, RPG (juegos de rol) y shooters.",
+                keywords: ["géneros videojuegos", "acción", "aventura", "RPG", "shooter"]
+            },
+            {
+                question: "¿Cómo han influido los videojuegos en la cultura moderna?",
+                answerd: "Los videojuegos se han convertido en una forma de arte, narrativa y deporte electrónico. Han influido en la música, moda, redes sociales y comunidades en línea.",
+                keywords: ["influencia cultural", "eSports", "comunidad gamer", "arte digital"]
+            },
+            {
+                question: "¿Qué consolas marcaron historia en los videojuegos?",
+                answerd: "Consolas como Nintendo Entertainment System (NES), PlayStation, Xbox, y Nintendo Switch marcaron generaciones con avances gráficos e innovación.",
+                keywords: ["consolas históricas", "NES", "PlayStation", "Switch", "Xbox"]
+            },
+            {
+                question: "¿Qué es un videojuego indie?",
+                answerd: "Es un juego creado por desarrolladores independientes, usualmente con recursos limitados, pero con gran creatividad e innovación, como 'Undertale' o 'Hollow Knight'.",
+                keywords: ["videojuego indie", "independiente", "undertale", "hollow knight"]
+            }
+        ]
+    },
+    {
+        subtheme: "cosplays",
+        title: "Cosplays",
+        description: "Este subtema explica qué es el cosplay, cómo se realiza y su importancia en la cultura friki.",
+        questions: [
+            {
+                question: "¿Qué es el cosplay?",
+                answerd: "Cosplay es la práctica de disfrazarse e interpretar personajes de anime, manga, videojuegos, películas u otros medios, combinando arte, actuación y creatividad.",
+                keywords: ["cosplay", "disfraz", "interpretación", "personaje"]
+            },
+            {
+                question: "¿Qué materiales se usan para hacer un cosplay?",
+                answerd: "Se usan telas, espumas EVA, termoplásticos como Worbla, maquillaje, pelucas, pintura y otros elementos hechos a mano o comprados.",
+                keywords: ["materiales", "cosplay", "worbla", "espuma eva", "maquillaje"]
+            },
+            {
+                question: "¿Qué tipos de eventos de cosplay existen?",
+                answerd: "Existen concursos en convenciones, pasarelas, sesiones de fotos temáticas y competencias internacionales como el World Cosplay Summit.",
+                keywords: ["eventos cosplay", "convenciones", "concursos", "world cosplay summit"]
+            },
+            {
+                question: "¿Cuál es la historia del cosplay?",
+                answerd: "Aunque tiene antecedentes en la ciencia ficción occidental, el término y práctica moderna se popularizó en Japón en los 70s con el auge del anime.",
+                keywords: ["historia cosplay", "japón", "origen", "ciencia ficción"]
+            },
+            {
+                question: "¿Es necesario parecerse físicamente al personaje para hacer cosplay?",
+                answerd: "No. El cosplay celebra la creatividad y la pasión, sin importar género, complexión o raza. Cualquier persona puede interpretar al personaje que desee.",
+                keywords: ["cosplay libre", "inclusividad", "personaje", "pasión"]
+            }
+        ]
+    },
+    {
+        subtheme: "multiversos",
+        title: "Multiversos",
+        description: "Este subtema explora el concepto de multiverso dentro de la ciencia ficción, cómics y medios relacionados con la cultura friki.",
+        questions: [
+            {
+                question: "¿Qué es un multiverso?",
+                answerd: "El multiverso es una teoría que plantea la existencia de múltiples universos paralelos coexistiendo con el nuestro, cada uno con diferentes versiones de eventos, personajes o leyes físicas.",
+                keywords: ["multiverso", "universos paralelos", "ficción", "realidades alternativas"]
+            },
+            {
+                question: "¿Qué papel juegan los multiversos en los cómics?",
+                answerd: "Los multiversos permiten a las editoriales crear líneas narrativas alternativas, reiniciar historias o combinar universos diferentes, como en DC Comics con 'Crisis en Tierras Infinitas'.",
+                keywords: ["cómics", "DC", "Crisis en Tierras Infinitas", "realidades múltiples"]
+            },
+            {
+                question: "¿Cómo se representan los multiversos en el cine?",
+                answerd: "En películas como 'Doctor Strange en el Multiverso de la Locura' o 'Spider-Man: No Way Home', los multiversos sirven para conectar diferentes franquicias y explorar versiones alternativas de personajes.",
+                keywords: ["cine", "Marvel", "Doctor Strange", "Spider-Man", "universos alternos"]
+            },
+            {
+                question: "¿Cuál es la diferencia entre universo alterno y multiverso?",
+                answerd: "Un universo alterno es solo una variación del universo principal, mientras que el multiverso es el conjunto total de todos esos universos alternos coexistiendo.",
+                keywords: ["universo alterno", "multiverso", "diferencias", "dimensiones"]
+            },
+            {
+                question: "¿Qué series o animes tratan sobre multiversos?",
+                answerd: "Series como 'Steins;Gate', 'Rick and Morty' y 'Dragon Ball Super' tratan el concepto de líneas temporales múltiples y realidades alternas como parte central de su trama.",
+                keywords: ["series multiverso", "Steins;Gate", "Rick and Morty", "Dragon Ball Super"]
+            }
+        ]
+    },
+    {
+        subtheme: "comics",
+        title: "Cómics",
+        description: "Este subtema cubre la historia, tipos y evolución de los cómics en la cultura popular.",
+        questions: [
+            {
+                question: "¿Qué es un cómic?",
+                answerd: "Un cómic es una forma de arte secuencial que combina ilustraciones y texto para contar una historia. Puede publicarse en revistas, libros o en formato digital.",
+                keywords: ["cómic", "historieta", "arte secuencial", "formato"]
+            },
+            {
+                question: "¿Cuál es la diferencia entre cómic, manga y novela gráfica?",
+                answerd: "El cómic generalmente se refiere a obras occidentales, el manga es de origen japonés y la novela gráfica suele tener un enfoque más literario, con historias largas y profundas.",
+                keywords: ["diferencias", "cómic vs manga", "novela gráfica"]
+            },
+            {
+                question: "¿Cuáles son las editoriales más importantes de cómics?",
+                answerd: "Marvel y DC Comics son las editoriales más reconocidas, aunque también existen otras como Dark Horse, Image Comics y Valiant.",
+                keywords: ["editoriales", "Marvel", "DC", "Dark Horse", "Image Comics"]
+            },
+            {
+                question: "¿Qué superhéroes famosos surgieron de los cómics?",
+                answerd: "Superhéroes como Spider-Man, Batman, Superman, Iron Man, Wonder Woman y los X-Men surgieron originalmente en cómics y luego se adaptaron a otros medios.",
+                keywords: ["superhéroes", "Spider-Man", "Batman", "X-Men", "origen"]
+            },
+            {
+                question: "¿Qué impacto han tenido los cómics en la cultura pop?",
+                answerd: "Los cómics han influido en películas, series, videojuegos y moda. Además, han sido medios para explorar temas sociales, políticos y culturales a lo largo del tiempo.",
+                keywords: ["cultura pop", "influencia", "impacto", "medios"]
+            }
+        ]
+    }
+]
 
-const Cultura_friky = {
+const Deportes = [
+    {
+        subtheme: "futbol",
+        title: "Fútbol",
+        description: "El fútbol es uno de los deportes más populares del mundo, jugado entre dos equipos de once jugadores con un balón.",
+        questions: [
+            {
+                question: "¿Qué es el fútbol?",
+                answerd: "El fútbol es un deporte de equipo que se juega entre dos conjuntos de once jugadores cada uno. El objetivo es marcar más goles que el oponente en un campo rectangular con porterías en ambos extremos.",
+                keywords: ["fútbol", "deporte", "balón", "equipo", "goles"]
+            },
+            {
+                question: "¿Cuáles son las reglas básicas del fútbol?",
+                answerd: "Las reglas básicas del fútbol incluyen que el balón no puede ser tocado con las manos (excepto el portero), se debe evitar el fuera de juego, y se debe respetar la duración del partido que consta de dos tiempos de 45 minutos.",
+                keywords: ["reglas", "fútbol", "fuera de juego", "tiempo", "portero"]
+            },
+            {
+                question: "¿Cuáles son las posiciones principales en un equipo de fútbol?",
+                answerd: "Las posiciones incluyen portero, defensas, mediocampistas y delanteros. Cada posición tiene funciones específicas dentro del campo para contribuir al juego colectivo.",
+                keywords: ["posiciones", "portero", "delantero", "mediocampista", "defensa"]
+            },
+            {
+                question: "¿Cuál es la historia del fútbol?",
+                answerd: "El fútbol moderno surgió en Inglaterra en el siglo XIX. Desde entonces, ha evolucionado hasta convertirse en un fenómeno global con competiciones como la Copa del Mundo y las ligas profesionales.",
+                keywords: ["historia", "fútbol", "Inglaterra", "origen", "Copa del Mundo"]
+            },
+            {
+                question: "¿Qué habilidades se necesitan para jugar fútbol?",
+                answerd: "Se requieren habilidades como control del balón, pase, tiro, velocidad, resistencia física y trabajo en equipo para ser eficaz en el campo.",
+                keywords: ["habilidades", "control del balón", "pase", "velocidad", "resistencia"]
+            }
+        ]
+    },
+    {
+        subtheme: "basquetbol",
+        title: "Básquetbol",
+        description: "El básquetbol es un deporte de equipo en el que se intenta encestar el balón en una canasta elevada.",
+        questions: [
+            {
+                question: "¿Qué es el básquetbol?",
+                answerd: "El básquetbol es un deporte que se juega entre dos equipos de cinco jugadores, cuyo objetivo es encestar el balón en una canasta situada a 3.05 metros del suelo.",
+                keywords: ["básquetbol", "canasta", "balón", "equipo", "deporte"]
+            },
+            {
+                question: "¿Cuáles son las reglas básicas del básquetbol?",
+                answerd: "Algunas reglas básicas incluyen no caminar sin botar el balón (pasos), no hacer contacto físico excesivo (falta) y respetar el reloj de posesión.",
+                keywords: ["reglas", "básquetbol", "pasos", "faltas", "posesión"]
+            },
+            {
+                question: "¿Cuáles son las posiciones en el básquetbol?",
+                answerd: "Las posiciones principales son base, escolta, alero, ala-pívot y pívot, cada una con funciones ofensivas y defensivas específicas.",
+                keywords: ["posiciones", "base", "pívot", "escolta", "alero"]
+            },
+            {
+                question: "¿Quién inventó el básquetbol y cuándo?",
+                answerd: "El básquetbol fue inventado por James Naismith en 1891 en Springfield, Massachusetts, como una actividad para mantener a sus alumnos activos durante el invierno.",
+                keywords: ["James Naismith", "historia", "básquetbol", "origen", "1891"]
+            },
+            {
+                question: "¿Qué habilidades se requieren en el básquetbol?",
+                answerd: "Son necesarias habilidades como driblar, lanzar, pasar, saltar y tener buena visión de juego para destacar en este deporte.",
+                keywords: ["habilidades", "driblar", "lanzar", "pasar", "básquetbol"]
+            }
+        ]
+    },
+    {
+        subtheme: "basebol",
+        title: "Béisbol",
+        description: "El béisbol es un deporte de bate y pelota en el que dos equipos se enfrentan para anotar carreras.",
+        questions: [
+            {
+                question: "¿Qué es el béisbol?",
+                answerd: "El béisbol es un deporte en el que dos equipos de nueve jugadores se alternan entre batear y defender con el objetivo de anotar carreras.",
+                keywords: ["béisbol", "carrera", "bateo", "equipo", "pelota"]
+            },
+            {
+                question: "¿Cómo se anota en el béisbol?",
+                answerd: "Se anota una carrera cuando un jugador batea y corre exitosamente por las cuatro bases sin ser eliminado por la defensa.",
+                keywords: ["anotar", "carrera", "bases", "béisbol", "reglas"]
+            },
+            {
+                question: "¿Cuáles son las posiciones en el béisbol?",
+                answerd: "Las posiciones incluyen lanzador, receptor, jugadores de cuadro (primera, segunda, tercera base, campocorto) y jardineros (izquierdo, central y derecho).",
+                keywords: ["posiciones", "lanzador", "receptor", "cuadro", "jardinero"]
+            },
+            {
+                question: "¿Cuál es el origen del béisbol?",
+                answerd: "El béisbol moderno tiene sus raíces en Estados Unidos en el siglo XIX, aunque deportes similares existieron anteriormente en Europa.",
+                keywords: ["origen", "béisbol", "Estados Unidos", "historia", "siglo XIX"]
+            },
+            {
+                question: "¿Qué habilidades se requieren para jugar béisbol?",
+                answerd: "Se necesita coordinación, reflejos rápidos, fuerza para batear, precisión para lanzar y buena estrategia de equipo.",
+                keywords: ["habilidades", "batear", "lanzar", "estrategia", "béisbol"]
+            }
+        ]
+    },
+    {
+        subtheme: "americano",
+        title: "Fútbol Americano",
+        description: "El fútbol americano es un deporte de contacto en el que dos equipos intentan avanzar un balón ovalado hasta la zona de anotación.",
+        questions: [
+            {
+                question: "¿Qué es el fútbol americano?",
+                answerd: "Es un deporte de equipo que se juega con un balón ovalado, donde los equipos intentan avanzar territorialmente para anotar touchdowns en la zona de anotación del oponente.",
+                keywords: ["fútbol americano", "touchdown", "balón ovalado", "deporte", "equipo"]
+            },
+            {
+                question: "¿Cómo se puntúa en el fútbol americano?",
+                answerd: "Se puede anotar un touchdown (6 puntos), un gol de campo (3 puntos), una conversión (1 o 2 puntos) o un safety (2 puntos).",
+                keywords: ["puntuar", "touchdown", "gol de campo", "puntos", "safety"]
+            },
+            {
+                question: "¿Cuáles son las posiciones clave en el fútbol americano?",
+                answerd: "Incluyen mariscal de campo (quarterback), corredores (running backs), receptores (wide receivers), linieros ofensivos y defensivos, entre otros.",
+                keywords: ["quarterback", "posiciones", "corredor", "receptor", "liniero"]
+            },
+            {
+                question: "¿Cuál es la historia del fútbol americano?",
+                answerd: "Se desarrolló en Estados Unidos a finales del siglo XIX, como una evolución del rugby y el fútbol europeo.",
+                keywords: ["historia", "fútbol americano", "Estados Unidos", "origen", "rugby"]
+            },
+            {
+                question: "¿Qué equipo ha sido históricamente exitoso en la NFL?",
+                answerd: "Equipos como los New England Patriots, Pittsburgh Steelers y Dallas Cowboys han tenido múltiples campeonatos y gran impacto en la NFL.",
+                keywords: ["NFL", "Patriots", "Steelers", "Cowboys", "campeonatos"]
+            }
+        ]
+    },
+    {
+        subtheme: "triatlon",
+        title: "Triatlón",
+        description: "El triatlón es una competencia que combina natación, ciclismo y carrera en un mismo evento.",
+        questions: [
+            {
+                question: "¿Qué es el triatlón?",
+                answerd: "El triatlón es una disciplina deportiva que combina tres actividades físicas: natación, ciclismo y carrera a pie, realizadas en secuencia sin pausas.",
+                keywords: ["triatlón", "natación", "ciclismo", "carrera", "deporte"]
+            },
+            {
+                question: "¿Cuáles son las distancias comunes en un triatlón?",
+                answerd: "Las distancias varían según el tipo de triatlón: sprint (750m natación, 20km ciclismo, 5km carrera), olímpico, medio Ironman y Ironman completo.",
+                keywords: ["distancias", "sprint", "Ironman", "olímpico", "triatlón"]
+            },
+            {
+                question: "¿Cómo se prepara un atleta para un triatlón?",
+                answerd: "Se entrena resistencia cardiovascular, técnica en cada disciplina, nutrición específica y se practican transiciones rápidas entre segmentos.",
+                keywords: ["entrenamiento", "resistencia", "transiciones", "nutrición", "triatlón"]
+            },
+            {
+                question: "¿Cuál es el origen del triatlón?",
+                answerd: "El triatlón moderno se originó en San Diego, California, en los años 70 como un entrenamiento cruzado entre disciplinas.",
+                keywords: ["origen", "triatlón", "San Diego", "años 70", "historia"]
+            },
+            {
+                question: "¿Qué equipo se necesita para competir en un triatlón?",
+                answerd: "Se requiere traje de baño o neopreno, bicicleta con casco, calzado deportivo, gafas para natación y a veces reloj GPS.",
+                keywords: ["equipo", "bicicleta", "traje", "neopreno", "casco", "calzado"]
+            }
+        ]
+    }
+]
 
-}
+const Artes = [
+    {
+        subtheme: "dibujo",
+        title: "Dibujo",
+        description: "El dibujo es una forma básica y expresiva de arte visual que utiliza líneas y trazos para representar ideas, objetos o emociones.",
+        questions: [
+            {
+                question: "¿Qué es el dibujo?",
+                answerd: "El dibujo es una disciplina artística que consiste en representar gráficamente objetos, figuras o ideas sobre una superficie mediante trazos, principalmente con lápiz, carbón, tinta u otros medios.",
+                keywords: ["dibujo", "arte", "trazo", "representación", "lápiz"]
+            },
+            {
+                question: "¿Cuáles son las técnicas comunes de dibujo?",
+                answerd: "Entre las técnicas más comunes están el dibujo a lápiz, carbón, tinta, pastel y bolígrafo. Cada una ofrece distintos niveles de detalle, textura y expresión.",
+                keywords: ["técnicas", "lápiz", "carbón", "pastel", "tinta"]
+            },
+            {
+                question: "¿Qué materiales se utilizan para dibujar?",
+                answerd: "Los materiales incluyen lápices de grafito, papel, borradores, reglas, compases, carboncillo, plumillas y papel especializado según la técnica utilizada.",
+                keywords: ["materiales", "papel", "grafito", "carboncillo", "instrumentos"]
+            },
+            {
+                question: "¿Cuál es la diferencia entre dibujo técnico y artístico?",
+                answerd: "El dibujo técnico se centra en la precisión y se usa en ingeniería y arquitectura, mientras que el artístico busca la expresión personal y estética.",
+                keywords: ["dibujo técnico", "dibujo artístico", "precisión", "expresión", "arquitectura"]
+            },
+            {
+                question: "¿Cuál es la importancia del dibujo en otras disciplinas?",
+                answerd: "El dibujo es fundamental en diseño gráfico, moda, arquitectura, animación y muchas otras áreas creativas y científicas como la anatomía y la botánica.",
+                keywords: ["importancia", "interdisciplinario", "diseño", "arquitectura", "moda"]
+            }
+        ]
+    },
+    {
+        subtheme: "escultura",
+        title: "Escultura",
+        description: "La escultura es una forma tridimensional del arte que consiste en modelar, tallar o ensamblar materiales para crear formas visuales.",
+        questions: [
+            {
+                question: "¿Qué es la escultura?",
+                answerd: "La escultura es una disciplina artística que consiste en crear formas tridimensionales a partir de materiales como piedra, madera, arcilla, metal o resina.",
+                keywords: ["escultura", "arte tridimensional", "modelado", "materiales", "forma"]
+            },
+            {
+                question: "¿Cuáles son los tipos de escultura?",
+                answerd: "Existen esculturas de bulto redondo (libres de todos lados), relieves (alto y bajo relieve) y esculturas cinéticas o móviles que integran movimiento.",
+                keywords: ["bulto redondo", "relieve", "alto relieve", "cinética", "tipos"]
+            },
+            {
+                question: "¿Qué materiales se utilizan en escultura?",
+                answerd: "Se emplean piedra (como mármol), madera, bronce, arcilla, hierro, resina y materiales reciclados o contemporáneos.",
+                keywords: ["materiales", "mármol", "bronce", "madera", "arcilla"]
+            },
+            {
+                question: "¿Qué diferencia hay entre escultura clásica y moderna?",
+                answerd: "La escultura clásica busca proporción, armonía y realismo, mientras que la moderna experimenta con formas abstractas y materiales no tradicionales.",
+                keywords: ["clásica", "moderna", "realismo", "abstracta", "diferencias"]
+            },
+            {
+                question: "¿Cuál es la importancia cultural de la escultura?",
+                answerd: "La escultura ha sido usada históricamente para expresar creencias religiosas, conmemorar eventos o representar figuras importantes en muchas culturas.",
+                keywords: ["cultura", "monumentos", "religión", "historia", "expresión"]
+            }
+        ]
+    },
+    {
+        subtheme: "musica",
+        title: "Música",
+        description: "La música es una manifestación artística basada en la combinación de sonidos y silencios con fines estéticos, expresivos y comunicativos.",
+        questions: [
+            {
+                question: "¿Qué es la música?",
+                answerd: "La música es el arte de organizar sonidos y silencios en el tiempo, mediante elementos como ritmo, melodía, armonía y timbre.",
+                keywords: ["música", "arte", "sonido", "ritmo", "melodía"]
+            },
+            {
+                question: "¿Cuáles son los elementos básicos de la música?",
+                answerd: "Los elementos fundamentales son ritmo, melodía, armonía, timbre, dinámica y forma musical.",
+                keywords: ["elementos", "ritmo", "armonía", "melodía", "timbre"]
+            },
+            {
+                question: "¿Qué tipos de música existen?",
+                answerd: "Existen múltiples géneros como música clásica, jazz, rock, pop, electrónica, folclórica, entre muchos otros.",
+                keywords: ["géneros", "clásica", "jazz", "rock", "pop"]
+            },
+            {
+                question: "¿Cómo influye la música en la sociedad?",
+                answerd: "La música influye en la identidad cultural, expresión emocional, protesta social, entretenimiento y desarrollo cognitivo.",
+                keywords: ["sociedad", "cultura", "emociones", "protesta", "cognición"]
+            },
+            {
+                question: "¿Qué instrumentos se usan en la música?",
+                answerd: "Los instrumentos se clasifican en cuerdas, viento, percusión y electrónicos. Ejemplos incluyen el piano, la guitarra, la flauta y la batería.",
+                keywords: ["instrumentos", "cuerdas", "viento", "percusión", "electrónicos"]
+            }
+        ]
+    },
+    {
+        subtheme: "expresionismo",
+        title: "Expresionismo",
+        description: "Movimiento artístico centrado en la expresión intensa de emociones subjetivas, a menudo con distorsión y colores vivos.",
+        questions: [
+            {
+                question: "¿Qué es el expresionismo?",
+                answerd: "El expresionismo es un movimiento artístico que busca representar emociones internas y subjetivas mediante formas distorsionadas, colores intensos y temas dramáticos.",
+                keywords: ["expresionismo", "emoción", "subjetividad", "colores", "distorsión"]
+            },
+            {
+                question: "¿Cuándo surgió el expresionismo?",
+                answerd: "El expresionismo surgió a inicios del siglo XX, principalmente en Alemania, como respuesta a los cambios sociales y culturales de la época.",
+                keywords: ["origen", "siglo XX", "Alemania", "movimiento", "arte"]
+            },
+            {
+                question: "¿Qué artistas destacaron en el expresionismo?",
+                answerd: "Destacan artistas como Edvard Munch, Egon Schiele, Wassily Kandinsky y Ernst Ludwig Kirchner.",
+                keywords: ["artistas", "Munch", "Kandinsky", "Schiele", "Kirchner"]
+            },
+            {
+                question: "¿Qué temas aborda el expresionismo?",
+                answerd: "Aborda angustia existencial, miedo, alienación, crítica social y conflictos internos del ser humano.",
+                keywords: ["temas", "miedo", "alienación", "existencial", "crítica"]
+            },
+            {
+                question: "¿Qué lo diferencia de otros movimientos?",
+                answerd: "A diferencia del impresionismo, el expresionismo no busca representar la realidad objetiva sino la emoción interna del artista.",
+                keywords: ["comparación", "impresionismo", "realidad", "emocional", "subjetivo"]
+            }
+        ]
+    },
+    {
+        subtheme: "surrealismo",
+        title: "Surrealismo",
+        description: "Movimiento artístico y literario que explora lo irracional, el inconsciente y los sueños a través de imágenes oníricas.",
+        questions: [
+            {
+                question: "¿Qué es el surrealismo?",
+                answerd: "El surrealismo es un movimiento artístico que busca liberar la mente de la lógica, explorando los sueños, lo irracional y lo inconsciente.",
+                keywords: ["surrealismo", "inconsciente", "sueños", "arte", "irracional"]
+            },
+            {
+                question: "¿Quién fundó el surrealismo?",
+                answerd: "El surrealismo fue fundado por André Breton en 1924 con la publicación del 'Manifiesto Surrealista'.",
+                keywords: ["André Breton", "fundador", "manifiesto", "1924", "historia"]
+            },
+            {
+                question: "¿Qué artistas representan el surrealismo?",
+                answerd: "Figuras clave incluyen Salvador Dalí, René Magritte, Max Ernst y Joan Miró.",
+                keywords: ["Dalí", "Magritte", "Ernst", "Miró", "artistas"]
+            },
+            {
+                question: "¿Qué técnicas se usan en el surrealismo?",
+                answerd: "Se utilizan el automatismo, el collage, la yuxtaposición y la manipulación de imágenes oníricas.",
+                keywords: ["técnicas", "automatismo", "collage", "onírico", "yuxtaposición"]
+            },
+            {
+                question: "¿Cómo influenció el surrealismo a otras artes?",
+                answerd: "Influyó en el cine, la literatura, la fotografía y el diseño, promoviendo la libertad creativa y la expresión subconsciente.",
+                keywords: ["influencia", "cine", "literatura", "fotografía", "subconsciente"]
+            }
+        ]
+    },
+    {
+        subtheme: "cubismo",
+        title: "Cubismo",
+        description: "Movimiento artístico revolucionario que fragmenta y reconfigura las formas para representar múltiples perspectivas en una sola imagen.",
+        questions: [
+            {
+                question: "¿Qué es el cubismo?",
+                answerd: "El cubismo es un movimiento artístico que surgió a comienzos del siglo XX y se caracteriza por la descomposición de las formas en figuras geométricas, mostrando varios puntos de vista simultáneamente.",
+                keywords: ["cubismo", "formas geométricas", "fragmentación", "arte moderno", "vanguardia"]
+            },
+            {
+                question: "¿Quiénes fueron los principales exponentes del cubismo?",
+                answerd: "Pablo Picasso y Georges Braque son considerados los padres del cubismo, quienes desarrollaron este estilo entre 1907 y 1914.",
+                keywords: ["Picasso", "Braque", "cubismo analítico", "cubismo sintético", "artistas"]
+            },
+            {
+                question: "¿Cuáles son las fases del cubismo?",
+                answerd: "El cubismo se divide en dos fases principales: el cubismo analítico (más abstracto y monocromático) y el cubismo sintético (más colorido y decorativo, con elementos de collage).",
+                keywords: ["cubismo analítico", "cubismo sintético", "fases", "estilos", "evolución"]
+            },
+            {
+                question: "¿Qué características definen al cubismo?",
+                answerd: "Se caracteriza por la fragmentación de figuras, el uso de formas geométricas, la ausencia de perspectiva tradicional y la representación de múltiples puntos de vista.",
+                keywords: ["características", "fragmentación", "geometría", "perspectiva", "multiplicidad"]
+            },
+            {
+                question: "¿Cómo influyó el cubismo en otros movimientos?",
+                answerd: "El cubismo influyó en el futurismo, el arte abstracto, el constructivismo y abrió el camino hacia el modernismo en diversas disciplinas.",
+                keywords: ["influencia", "modernismo", "futurismo", "constructivismo", "abstracto"]
+            }
+        ]
+    },
+    {
+        subtheme: "oleo",
+        title: "Óleo",
+        description: "Técnica pictórica que utiliza pigmentos mezclados con aceites para lograr colores intensos, textura y durabilidad.",
+        questions: [
+            {
+                question: "¿Qué es la pintura al óleo?",
+                answerd: "Es una técnica artística que consiste en mezclar pigmentos con aceites secantes como el de linaza para crear una pintura espesa, duradera y con acabado brillante.",
+                keywords: ["óleo", "pintura", "técnica", "aceites", "pigmentos"]
+            },
+            {
+                question: "¿Cuáles son las ventajas del óleo frente a otras técnicas?",
+                answerd: "Ofrece gran intensidad de color, posibilidad de trabajar con capas, correcciones, mezclas suaves y una alta durabilidad.",
+                keywords: ["ventajas", "color", "durabilidad", "corrección", "capas"]
+            },
+            {
+                question: "¿Qué materiales se necesitan para pintar al óleo?",
+                answerd: "Se requiere óleo (tubos de pigmento), pinceles, espátulas, lienzos, disolventes (como trementina), barniz y paleta.",
+                keywords: ["materiales", "pinceles", "lienzo", "disolvente", "barniz"]
+            },
+            {
+                question: "¿Cómo se aplica la técnica de veladura en óleo?",
+                answerd: "La veladura consiste en aplicar capas finas y transparentes de color para modificar el tono y crear profundidad visual.",
+                keywords: ["veladura", "capas", "transparencia", "profundidad", "óptica"]
+            },
+            {
+                question: "¿Qué artistas destacaron en el uso del óleo?",
+                answerd: "Grandes maestros como Leonardo da Vinci, Rembrandt, Van Gogh y Velázquez utilizaron esta técnica magistralmente.",
+                keywords: ["Leonardo", "Rembrandt", "Van Gogh", "Velázquez", "clásicos"]
+            }
+        ]
+    },
+    {
+        subtheme: "muralismo",
+        title: "Muralismo",
+        description: "Movimiento artístico centrado en la creación de murales con contenido social y político, generalmente en espacios públicos.",
+        questions: [
+            {
+                question: "¿Qué es el muralismo?",
+                answerd: "El muralismo es una corriente artística que utiliza los muros y paredes como lienzo para representar temas sociales, políticos o históricos, con el fin de educar e impactar al público.",
+                keywords: ["muralismo", "murales", "arte público", "temas sociales", "educación"]
+            },
+            {
+                question: "¿Dónde y cuándo surgió el muralismo?",
+                answerd: "El muralismo moderno surgió en México tras la Revolución Mexicana, entre los años 1920 y 1930, como una forma de educación popular.",
+                keywords: ["México", "Revolución", "1920", "origen", "arte público"]
+            },
+            {
+                question: "¿Qué artistas representan el muralismo mexicano?",
+                answerd: "Diego Rivera, José Clemente Orozco y David Alfaro Siqueiros son los principales exponentes del muralismo mexicano.",
+                keywords: ["Rivera", "Orozco", "Siqueiros", "muralistas", "mexicanos"]
+            },
+            {
+                question: "¿Cuál es la función del mural en la sociedad?",
+                answerd: "El mural busca transmitir mensajes accesibles al pueblo, promoviendo la conciencia social, la identidad cultural y el cambio político.",
+                keywords: ["función", "conciencia", "educación", "pueblo", "mensaje"]
+            },
+            {
+                question: "¿Cómo influenció el muralismo en el arte contemporáneo?",
+                answerd: "Inspiró movimientos como el arte urbano y el grafiti, y reforzó el uso del arte como herramienta de activismo visual.",
+                keywords: ["influencia", "grafiti", "arte urbano", "activismo", "visual"]
+            }
+        ]
+    },
+    {
+        subtheme: "brutalismo",
+        title: "Brutalismo",
+        description: "Estilo arquitectónico caracterizado por el uso de concreto expuesto, formas monumentales y una estética funcionalista y austera.",
+        questions: [
+            {
+                question: "¿Qué es el brutalismo?",
+                answerd: "El brutalismo es un estilo arquitectónico surgido en la década de 1950 que se caracteriza por el uso de hormigón visto, estructuras masivas y un enfoque funcional sin ornamentos.",
+                keywords: ["brutalismo", "arquitectura", "concreto", "funcionalismo", "estructura"]
+            },
+            {
+                question: "¿Por qué se llama brutalismo?",
+                answerd: "El término proviene del francés 'béton brut' (hormigón crudo), utilizado por Le Corbusier, uno de sus principales impulsores.",
+                keywords: ["nombre", "béton brut", "Le Corbusier", "concreto", "origen"]
+            },
+            {
+                question: "¿Cuáles son las características del brutalismo?",
+                answerd: "Se caracteriza por el uso de materiales crudos, formas geométricas pesadas, repetición modular y ausencia de decoración.",
+                keywords: ["características", "materiales", "pesadez", "modular", "austeridad"]
+            },
+            {
+                question: "¿Dónde se encuentran ejemplos notables de brutalismo?",
+                answerd: "Se encuentran en edificios gubernamentales, universidades y complejos habitacionales en Europa, América y Asia.",
+                keywords: ["edificios", "ejemplos", "universidades", "gobierno", "internacional"]
+            },
+            {
+                question: "¿Cómo es percibido el brutalismo hoy en día?",
+                answerd: "Es admirado por su autenticidad y monumentalidad, aunque también criticado por su apariencia fría y deshumanizada.",
+                keywords: ["percepción", "crítica", "admiración", "controversia", "monumental"]
+            }
+        ]
+    }
+]
 
-const Deportes = {
+const Anatomia = [
+    {
+        subtheme: "sistema_nervioso_central",
+        title: "Sistema Nervioso Central",
+        description: "Comprende el cerebro y la médula espinal, y se encarga de procesar la información y coordinar la actividad del cuerpo.",
+        questions: [
+            {
+                question: "¿Qué es el sistema nervioso central?",
+                answerd: "Es la parte del sistema nervioso compuesta por el cerebro y la médula espinal. Se encarga de recibir, procesar y enviar información a todo el cuerpo para regular sus funciones.",
+                keywords: ["sistema nervioso central", "cerebro", "médula espinal", "funciones"]
+            },
+            {
+                question: "¿Cuáles son las funciones principales del cerebro?",
+                answerd: "El cerebro controla funciones como el pensamiento, el aprendizaje, las emociones, la memoria y el movimiento voluntario.",
+                keywords: ["funciones del cerebro", "pensamiento", "memoria", "movimiento"]
+            },
+            {
+                question: "¿Qué papel juega la médula espinal en el cuerpo?",
+                answerd: "La médula espinal transmite señales entre el cerebro y el resto del cuerpo, y también controla algunos reflejos.",
+                keywords: ["médula espinal", "transmisión de señales", "reflejos"]
+            },
+            {
+                question: "¿Cómo se protege el sistema nervioso central?",
+                answerd: "Está protegido por los huesos del cráneo y la columna vertebral, además de las meninges y el líquido cefalorraquídeo.",
+                keywords: ["protección SNC", "meninges", "líquido cefalorraquídeo", "cráneo"]
+            },
+            {
+                question: "¿Qué enfermedades pueden afectar al sistema nervioso central?",
+                answerd: "Algunas enfermedades incluyen la esclerosis múltiple, el Alzheimer, el Parkinson y los accidentes cerebrovasculares.",
+                keywords: ["enfermedades del SNC", "Alzheimer", "Parkinson", "esclerosis"]
+            }
+        ]
+    },
+    {
+        subtheme: "sistema_nervioso_periferico",
+        title: "Sistema Nervioso Periférico",
+        description: "Conecta el sistema nervioso central con el resto del cuerpo mediante nervios que envían y reciben señales.",
+        questions: [
+            {
+                question: "¿Qué es el sistema nervioso periférico?",
+                answerd: "Es la parte del sistema nervioso que se encuentra fuera del cerebro y la médula espinal, y conecta al SNC con el resto del cuerpo.",
+                keywords: ["sistema nervioso periférico", "SNP", "nervios", "conexión"]
+            },
+            {
+                question: "¿Qué funciones tiene el sistema nervioso periférico?",
+                answerd: "Transmite señales motoras y sensoriales, permite la percepción del entorno y controla funciones automáticas del cuerpo.",
+                keywords: ["funciones SNP", "señales motoras", "sensorial", "percepción"]
+            },
+            {
+                question: "¿Cómo se divide el sistema nervioso periférico?",
+                answerd: "Se divide en sistema nervioso somático (control voluntario) y autónomo (control involuntario).",
+                keywords: ["divisiones SNP", "somático", "autónomo", "voluntario", "involuntario"]
+            },
+            {
+                question: "¿Qué son los nervios craneales y espinales?",
+                answerd: "Los nervios craneales emergen del cerebro y los espinales de la médula espinal; ambos llevan señales sensoriales y motoras.",
+                keywords: ["nervios craneales", "nervios espinales", "sensorial", "motora"]
+            },
+            {
+                question: "¿Qué enfermedades afectan al sistema nervioso periférico?",
+                answerd: "Incluyen neuropatías periféricas, síndrome de Guillain-Barré y daños por diabetes o infecciones.",
+                keywords: ["neuropatías", "síndrome Guillain-Barré", "daño nervioso", "diabetes"]
+            }
+        ]
+    },
+    {
+        subtheme: "adn",
+        title: "ADN (Ácido Desoxirribonucleico)",
+        description: "Molécula que contiene la información genética usada en el desarrollo y funcionamiento de todos los seres vivos.",
+        questions: [
+            {
+                question: "¿Qué es el ADN?",
+                answerd: "El ADN es una molécula que contiene el material genético necesario para el desarrollo, funcionamiento y reproducción de los seres vivos.",
+                keywords: ["ADN", "material genético", "molécula", "información genética"]
+            },
+            {
+                question: "¿Cuál es la estructura del ADN?",
+                answerd: "Está formado por dos cadenas enrolladas en forma de doble hélice, compuestas por nucleótidos con bases nitrogenadas (A, T, C, G).",
+                keywords: ["estructura ADN", "doble hélice", "bases nitrogenadas", "nucleótidos"]
+            },
+            {
+                question: "¿Qué función tiene el ADN?",
+                answerd: "Codifica las instrucciones para fabricar proteínas y regula la actividad celular.",
+                keywords: ["función ADN", "proteínas", "instrucciones genéticas", "regulación celular"]
+            },
+            {
+                question: "¿Dónde se encuentra el ADN en las células?",
+                answerd: "En células eucariotas, se encuentra en el núcleo; en procariotas, en el citoplasma.",
+                keywords: ["ubicación ADN", "núcleo", "células eucariotas", "procariotas"]
+            },
+            {
+                question: "¿Qué es una mutación del ADN?",
+                answerd: "Es un cambio en la secuencia de bases del ADN, que puede provocar enfermedades o variaciones genéticas.",
+                keywords: ["mutación", "variación genética", "secuencia ADN", "enfermedades"]
+            }
+        ]
+    },
+    {
+        subtheme: "hormonas",
+        title: "Hormonas",
+        description: "Sustancias químicas que regulan diversas funciones del cuerpo, producidas por glándulas del sistema endocrino.",
+        questions: [
+            {
+                question: "¿Qué son las hormonas?",
+                answerd: "Son mensajeros químicos producidos por glándulas que regulan funciones como el crecimiento, el metabolismo y el estado de ánimo.",
+                keywords: ["hormonas", "mensajeros químicos", "sistema endocrino", "funciones corporales"]
+            },
+            {
+                question: "¿Cuáles son las principales glándulas endocrinas?",
+                answerd: "Incluyen la hipófisis, tiroides, páncreas, glándulas suprarrenales, ovarios y testículos.",
+                keywords: ["glándulas endocrinas", "hipófisis", "tiroides", "páncreas", "suprarrenales"]
+            },
+            {
+                question: "¿Qué tipos de hormonas existen?",
+                answerd: "Existen hormonas esteroides, peptídicas y derivadas de aminoácidos, según su estructura química.",
+                keywords: ["tipos de hormonas", "esteroides", "peptídicas", "aminoácidos"]
+            },
+            {
+                question: "¿Qué desequilibrios hormonales existen?",
+                answerd: "Pueden causar enfermedades como hipotiroidismo, diabetes, síndrome de Cushing o infertilidad.",
+                keywords: ["desequilibrio hormonal", "hipotiroidismo", "diabetes", "enfermedades hormonales"]
+            },
+            {
+                question: "¿Cómo actúan las hormonas en el cuerpo?",
+                answerd: "Se liberan en la sangre y actúan sobre órganos o tejidos específicos que tienen receptores adecuados.",
+                keywords: ["acción hormonal", "receptores", "órganos blanco", "sistema endocrino"]
+            }
+        ]
+    },
+    {
+        subtheme: "neurotransmisores",
+        title: "Neurotransmisores",
+        description: "Moléculas químicas que transmiten señales entre las neuronas a través de las sinapsis.",
+        questions: [
+            {
+                question: "¿Qué son los neurotransmisores?",
+                answerd: "Son sustancias químicas que permiten la comunicación entre las neuronas en el sistema nervioso.",
+                keywords: ["neurotransmisores", "comunicación neuronal", "sistema nervioso", "sinapsis"]
+            },
+            {
+                question: "¿Cuáles son los principales tipos de neurotransmisores?",
+                answerd: "Algunos ejemplos son la dopamina, serotonina, acetilcolina, glutamato y GABA.",
+                keywords: ["tipos de neurotransmisores", "dopamina", "serotonina", "GABA", "glutamato"]
+            },
+            {
+                question: "¿Qué función tiene la dopamina?",
+                answerd: "Está relacionada con el placer, la motivación, el aprendizaje y el movimiento.",
+                keywords: ["dopamina", "motivación", "placer", "movimiento"]
+            },
+            {
+                question: "¿Qué causa un desequilibrio en neurotransmisores?",
+                answerd: "Puede causar trastornos como depresión, ansiedad, esquizofrenia o Parkinson.",
+                keywords: ["desequilibrio neurotransmisores", "depresión", "ansiedad", "trastornos"]
+            },
+            {
+                question: "¿Cómo se eliminan los neurotransmisores después de su acción?",
+                answerd: "Se eliminan por recaptación en la neurona emisora, degradación enzimática o difusión fuera de la sinapsis.",
+                keywords: ["recaptación", "enzimas", "eliminación neurotransmisores", "sinapsis"]
+            }
+        ]
+    },
+    {
+        subtheme: "sistema_circulatorio",
+        title: "Sistema Circulatorio",
+        description: "Sistema encargado de transportar sangre, nutrientes, oxígeno y desechos a través del cuerpo humano.",
+        questions: [
+            {
+                question: "¿Qué es el sistema circulatorio?",
+                answerd: "Es el sistema encargado de transportar la sangre por todo el cuerpo, distribuyendo oxígeno y nutrientes, y recogiendo desechos.",
+                keywords: ["sistema circulatorio", "sangre", "nutrientes", "desechos", "oxígeno"]
+            },
+            {
+                question: "¿Qué órganos componen el sistema circulatorio?",
+                answerd: "Los principales son el corazón, las arterias, venas y capilares.",
+                keywords: ["órganos del sistema circulatorio", "corazón", "arterias", "venas", "capilares"]
+            },
+            {
+                question: "¿Cuál es la función del corazón?",
+                answerd: "El corazón actúa como una bomba que impulsa la sangre por todo el cuerpo a través del sistema circulatorio.",
+                keywords: ["función del corazón", "bomba cardíaca", "circulación sanguínea"]
+            },
+            {
+                question: "¿Qué tipos de circulación existen?",
+                answerd: "Circulación pulmonar (entre el corazón y pulmones) y circulación sistémica (entre el corazón y el resto del cuerpo).",
+                keywords: ["circulación pulmonar", "circulación sistémica", "tipos de circulación"]
+            },
+            {
+                question: "¿Qué enfermedades afectan el sistema circulatorio?",
+                answerd: "Entre ellas están la hipertensión, arteriosclerosis, infartos y enfermedades cardíacas congénitas.",
+                keywords: ["enfermedades circulatorias", "hipertensión", "infarto", "arteriosclerosis"]
+            }
+        ]
+    },
+    {
+        subtheme: "sistema_digestivo",
+        title: "Sistema Digestivo",
+        description: "Sistema responsable de procesar los alimentos, absorber nutrientes y eliminar desechos sólidos del cuerpo.",
+        questions: [
+            {
+                question: "¿Qué es el sistema digestivo?",
+                answerd: "Es el conjunto de órganos encargados de transformar los alimentos en nutrientes que el cuerpo puede absorber y utilizar.",
+                keywords: ["sistema digestivo", "digestión", "nutrientes", "procesamiento de alimentos"]
+            },
+            {
+                question: "¿Cuáles son los órganos principales del sistema digestivo?",
+                answerd: "Incluye la boca, esófago, estómago, intestino delgado, intestino grueso, hígado, páncreas y vesícula biliar.",
+                keywords: ["órganos digestivos", "estómago", "intestino", "hígado", "páncreas"]
+            },
+            {
+                question: "¿Cómo se lleva a cabo la digestión?",
+                answerd: "La digestión es un proceso mecánico y químico que descompone los alimentos en moléculas simples para su absorción.",
+                keywords: ["proceso digestivo", "digestión mecánica", "digestión química", "absorción"]
+            },
+            {
+                question: "¿Qué función cumple el intestino delgado?",
+                answerd: "Es el principal sitio de absorción de nutrientes, ya que posee una gran superficie gracias a las vellosidades intestinales.",
+                keywords: ["intestino delgado", "absorción de nutrientes", "vellosidades"]
+            },
+            {
+                question: "¿Qué trastornos pueden afectar al sistema digestivo?",
+                answerd: "Algunos incluyen gastritis, reflujo ácido, síndrome del intestino irritable y enfermedad celíaca.",
+                keywords: ["trastornos digestivos", "gastritis", "reflujo", "celíaca", "intestino irritable"]
+            }
+        ]
+    },
+    {
+        subtheme: "sistema_respiratorio",
+        title: "Sistema Respiratorio",
+        description: "Sistema encargado del intercambio de gases, permitiendo la entrada de oxígeno y la expulsión de dióxido de carbono.",
+        questions: [
+            {
+                question: "¿Qué es el sistema respiratorio?",
+                answerd: "Es el sistema que permite el intercambio de gases entre el cuerpo y el ambiente, esencial para la respiración celular.",
+                keywords: ["sistema respiratorio", "intercambio de gases", "oxígeno", "dióxido de carbono"]
+            },
+            {
+                question: "¿Qué órganos lo componen?",
+                answerd: "Incluye la nariz, faringe, laringe, tráquea, bronquios, pulmones y diafragma.",
+                keywords: ["órganos respiratorios", "nariz", "pulmones", "tráquea", "bronquios"]
+            },
+            {
+                question: "¿Cómo se realiza la respiración?",
+                answerd: "La respiración incluye la inhalación de oxígeno y la exhalación de dióxido de carbono mediante contracciones musculares.",
+                keywords: ["respiración", "inhalación", "exhalación", "contracción diafragma"]
+            },
+            {
+                question: "¿Qué función tienen los alvéolos pulmonares?",
+                answerd: "Los alvéolos permiten el intercambio gaseoso entre el aire inhalado y la sangre, gracias a su delgada membrana y gran superficie.",
+                keywords: ["alvéolos", "intercambio gaseoso", "oxígeno", "sangre"]
+            },
+            {
+                question: "¿Qué enfermedades afectan el sistema respiratorio?",
+                answerd: "Algunas son el asma, bronquitis, neumonía, EPOC y COVID-19.",
+                keywords: ["enfermedades respiratorias", "asma", "bronquitis", "neumonía", "EPOC", "COVID"]
+            }
+        ]
+    }
+]
 
-}
+const Tecnologia = [
+    {
+        subtheme: "blockchain",
+        title: "Blockchain",
+        description: "Tecnología de registro distribuido que permite almacenar datos de forma segura, transparente y descentralizada.",
+        questions: [
+            {
+                question: "¿Qué es Blockchain?",
+                answerd: "Blockchain es una tecnología que permite almacenar información en bloques encadenados de forma segura, transparente y descentralizada. Se usa principalmente en criptomonedas como Bitcoin.",
+                keywords: ["blockchain", "tecnología descentralizada", "registro digital", "bitcoin", "cadena de bloques"]
+            },
+            {
+                question: "¿Cómo funciona la tecnología Blockchain?",
+                answerd: "Cada bloque contiene información y un código único llamado hash. Cuando un bloque se llena, se enlaza al anterior, creando una cadena inalterable. Toda la red verifica los datos mediante consenso.",
+                keywords: ["hash", "bloques", "consenso", "registro", "funcionamiento blockchain"]
+            },
+            {
+                question: "¿Cuáles son las ventajas del Blockchain?",
+                answerd: "Transparencia, seguridad, resistencia a la manipulación y eliminación de intermediarios son sus principales ventajas.",
+                keywords: ["ventajas blockchain", "seguridad", "transparencia", "intermediarios"]
+            },
+            {
+                question: "¿Dónde se utiliza Blockchain actualmente?",
+                answerd: "Se usa en criptomonedas, contratos inteligentes, trazabilidad en cadenas de suministro, identidad digital y votaciones electrónicas.",
+                keywords: ["aplicaciones blockchain", "criptomonedas", "contratos inteligentes", "votaciones", "trazabilidad"]
+            },
+            {
+                question: "¿Qué desafíos enfrenta el uso de Blockchain?",
+                answerd: "Escalabilidad, consumo energético, regulación legal y falta de adopción masiva son algunos de los desafíos.",
+                keywords: ["desafíos blockchain", "escalabilidad", "energía", "regulación", "adopción"]
+            }
+        ]
+    },
+    {
+        subtheme: "ia",
+        title: "Inteligencia Artificial",
+        description: "Rama de la informática que desarrolla sistemas capaces de realizar tareas que requieren inteligencia humana.",
+        questions: [
+            {
+                question: "¿Qué es la Inteligencia Artificial?",
+                answerd: "La Inteligencia Artificial (IA) es la capacidad de una máquina para imitar procesos de inteligencia humana como el aprendizaje, razonamiento y autocorrección.",
+                keywords: ["inteligencia artificial", "IA", "aprendizaje automático", "razonamiento", "algoritmos"]
+            },
+            {
+                question: "¿Qué tipos de IA existen?",
+                answerd: "IA débil (realiza tareas específicas), IA fuerte (capaz de razonar como un humano) y superinteligencia artificial (aún teórica).",
+                keywords: ["tipos de IA", "IA débil", "IA fuerte", "superinteligencia"]
+            },
+            {
+                question: "¿Dónde se aplica la Inteligencia Artificial?",
+                answerd: "En asistentes virtuales, recomendaciones, vehículos autónomos, diagnósticos médicos, seguridad y más.",
+                keywords: ["aplicaciones IA", "asistentes virtuales", "vehículos autónomos", "diagnóstico médico"]
+            },
+            {
+                question: "¿Qué es el aprendizaje automático?",
+                answerd: "Es una subrama de la IA que permite a las máquinas aprender a partir de datos sin ser programadas explícitamente.",
+                keywords: ["aprendizaje automático", "machine learning", "datos", "IA"]
+            },
+            {
+                question: "¿Cuáles son los riesgos de la Inteligencia Artificial?",
+                answerd: "Desempleo, sesgos en algoritmos, uso militar, invasión de privacidad y dependencia tecnológica.",
+                keywords: ["riesgos IA", "privacidad", "desempleo", "sesgo", "automatización"]
+            }
+        ]
+    },
+    {
+        subtheme: "ciberseguridad",
+        title: "Ciberseguridad",
+        description: "Conjunto de prácticas y tecnologías para proteger sistemas, redes y datos frente a ataques digitales.",
+        questions: [
+            {
+                question: "¿Qué es la ciberseguridad?",
+                answerd: "La ciberseguridad es la disciplina que protege la información digital y los sistemas informáticos contra accesos no autorizados, daños o robos.",
+                keywords: ["ciberseguridad", "seguridad informática", "protección digital", "ataques cibernéticos"]
+            },
+            {
+                question: "¿Qué tipos de amenazas existen en ciberseguridad?",
+                answerd: "Malware, phishing, ransomware, ataques DDoS, ingeniería social y robo de identidad.",
+                keywords: ["amenazas", "malware", "phishing", "ransomware", "ataques cibernéticos"]
+            },
+            {
+                question: "¿Qué son los antivirus y los firewalls?",
+                answerd: "Los antivirus detectan y eliminan malware, mientras que los firewalls controlan el tráfico de red para prevenir accesos no autorizados.",
+                keywords: ["antivirus", "firewall", "protección", "malware", "tráfico de red"]
+            },
+            {
+                question: "¿Qué es la autenticación de dos factores?",
+                answerd: "Es un método de seguridad que requiere dos formas de verificación para acceder a una cuenta o sistema.",
+                keywords: ["autenticación", "2FA", "verificación", "seguridad de acceso"]
+            },
+            {
+                question: "¿Cómo prevenir ataques cibernéticos?",
+                answerd: "Actualizando software, usando contraseñas seguras, haciendo copias de seguridad y educando a los usuarios.",
+                keywords: ["prevención", "actualización", "contraseñas", "copias de seguridad", "educación"]
+            }
+        ]
+    },
+    {
+        subtheme: "iot",
+        title: "Internet de las Cosas (IoT)",
+        description: "Conexión de objetos físicos a internet para recolectar y compartir datos, automatizando procesos y mejorando la eficiencia.",
+        questions: [
+            {
+                question: "¿Qué es el Internet de las Cosas (IoT)?",
+                answerd: "Es una red de objetos físicos conectados a internet que pueden recopilar e intercambiar datos para tomar decisiones automáticas o informadas.",
+                keywords: ["IoT", "Internet de las cosas", "objetos conectados", "automatización"]
+            },
+            {
+                question: "¿Cómo funciona el IoT?",
+                answerd: "Los dispositivos tienen sensores y software que recolectan datos, los envían a la nube y pueden actuar según análisis en tiempo real.",
+                keywords: ["funcionamiento IoT", "sensores", "datos", "nube", "automatización"]
+            },
+            {
+                question: "¿Cuáles son algunos ejemplos de IoT?",
+                answerd: "Termostatos inteligentes, relojes inteligentes, sistemas de riego automatizados, autos conectados y electrodomésticos inteligentes.",
+                keywords: ["ejemplos IoT", "relojes inteligentes", "casa inteligente", "automóviles"]
+            },
+            {
+                question: "¿Qué beneficios ofrece el IoT?",
+                answerd: "Mayor eficiencia, ahorro energético, mejor toma de decisiones y comodidad.",
+                keywords: ["beneficios IoT", "eficiencia", "comodidad", "ahorro"]
+            },
+            {
+                question: "¿Cuáles son los desafíos del IoT?",
+                answerd: "Privacidad, seguridad, interoperabilidad entre dispositivos y gran volumen de datos.",
+                keywords: ["desafíos IoT", "privacidad", "seguridad", "datos", "compatibilidad"]
+            }
+        ]
+    },
+    {
+        subtheme: "software",
+        title: "Software",
+        description: "Conjunto de instrucciones y datos que permiten el funcionamiento de computadoras y dispositivos electrónicos.",
+        questions: [
+            {
+                question: "¿Qué es el software?",
+                answerd: "El software es un conjunto de programas y rutinas que permiten a un sistema informático ejecutar tareas específicas, desde sistemas operativos hasta aplicaciones de usuario.",
+                keywords: ["software", "programas", "sistemas operativos", "aplicaciones", "informática"]
+            },
+            {
+                question: "¿Qué tipos de software existen?",
+                answerd: "Los principales tipos son: software de sistema (como Windows o Linux), software de aplicación (como Word o Photoshop) y software de programación (como editores de código).",
+                keywords: ["tipos de software", "software de sistema", "software de aplicación", "programación"]
+            },
+            {
+                question: "¿Qué es el software libre?",
+                answerd: "Es el software que puede ser utilizado, modificado y distribuido libremente por cualquier persona, como Linux o LibreOffice.",
+                keywords: ["software libre", "licencias abiertas", "GNU", "Linux"]
+            },
+            {
+                question: "¿Qué es el ciclo de vida del software?",
+                answerd: "Es el proceso completo que sigue un software desde su concepción hasta su retiro, incluyendo análisis, diseño, codificación, pruebas y mantenimiento.",
+                keywords: ["ciclo de vida del software", "desarrollo", "mantenimiento", "pruebas", "SDLC"]
+            },
+            {
+                question: "¿Qué lenguajes se usan para desarrollar software?",
+                answerd: "Algunos lenguajes comunes son Python, Java, C++, JavaScript y C#, dependiendo del tipo de software a crear.",
+                keywords: ["lenguajes de programación", "desarrollo software", "Python", "Java", "JavaScript"]
+            }
+        ]
+    },
+    {
+        subtheme: "hardware",
+        title: "Hardware",
+        description: "Componentes físicos que conforman un sistema informático, necesarios para ejecutar software y realizar tareas.",
+        questions: [
+            {
+                question: "¿Qué es el hardware?",
+                answerd: "El hardware es el conjunto de componentes físicos de una computadora o dispositivo electrónico, como el procesador, memoria, disco duro y periféricos.",
+                keywords: ["hardware", "componentes físicos", "computadora", "procesador", "memoria"]
+            },
+            {
+                question: "¿Cuáles son los tipos de hardware?",
+                answerd: "Se divide en hardware de procesamiento (CPU), almacenamiento (disco duro, SSD), entrada (teclado, ratón) y salida (monitor, impresora).",
+                keywords: ["tipos de hardware", "entrada", "salida", "almacenamiento", "procesamiento"]
+            },
+            {
+                question: "¿Qué función cumple la CPU?",
+                answerd: "La Unidad Central de Procesamiento (CPU) ejecuta las instrucciones de los programas y coordina las operaciones del sistema.",
+                keywords: ["CPU", "procesador", "función CPU", "unidad central de procesamiento"]
+            },
+            {
+                question: "¿Qué diferencias hay entre HDD y SSD?",
+                answerd: "Los HDD son discos mecánicos más baratos pero lentos, mientras que los SSD son unidades electrónicas más rápidas y silenciosas.",
+                keywords: ["HDD", "SSD", "disco duro", "almacenamiento", "velocidad"]
+            },
+            {
+                question: "¿Qué es una placa base (motherboard)?",
+                answerd: "Es el componente principal que conecta todos los elementos del hardware, permitiendo la comunicación entre ellos.",
+                keywords: ["placa base", "motherboard", "tarjeta madre", "hardware", "conexiones"]
+            }
+        ]
+    },
+    {
+        subtheme: "realidad_aumentada",
+        title: "Realidad Aumentada",
+        description: "Tecnología que superpone elementos digitales en el mundo real mediante dispositivos como smartphones o lentes especiales.",
+        questions: [
+            {
+                question: "¿Qué es la realidad aumentada?",
+                answerd: "La realidad aumentada (RA) es una tecnología que combina elementos virtuales con el entorno físico en tiempo real, mejorando la percepción del usuario.",
+                keywords: ["realidad aumentada", "RA", "elementos virtuales", "tecnología inmersiva"]
+            },
+            {
+                question: "¿En qué se diferencia de la realidad virtual?",
+                answerd: "La RA añade información digital al mundo real, mientras que la realidad virtual crea un entorno completamente simulado e inmersivo.",
+                keywords: ["realidad aumentada", "realidad virtual", "diferencias", "simulación", "entorno"]
+            },
+            {
+                question: "¿Qué dispositivos se usan con RA?",
+                answerd: "Se puede usar con smartphones, tablets, lentes como HoloLens o Magic Leap, y cámaras con software especializado.",
+                keywords: ["dispositivos RA", "smartphones", "lentes", "HoloLens", "Magic Leap"]
+            },
+            {
+                question: "¿Qué aplicaciones tiene la RA?",
+                answerd: "Educación interactiva, videojuegos, medicina, arquitectura, marketing y mantenimiento técnico, entre otros.",
+                keywords: ["aplicaciones RA", "educación", "videojuegos", "marketing", "medicina"]
+            },
+            {
+                question: "¿Cuáles son los retos de implementar RA?",
+                answerd: "Incluyen el costo de dispositivos, desarrollo complejo, precisión de sensores y aceptación del usuario.",
+                keywords: ["retos RA", "costo", "precisión", "aceptación", "tecnología emergente"]
+            }
+        ]
+    }
+]
 
-const Artes = {
+const Automoviles = [
+    {
+        subtheme: "motores",
+        title: "Motores",
+        description: "Unidad mecánica que convierte energía en movimiento para propulsar un vehículo.",
+        questions: [
+            {
+                question: "¿Qué es un motor de automóvil?",
+                answerd: "Es un dispositivo mecánico que transforma energía (generalmente de combustibles fósiles o electricidad) en energía mecánica para mover el vehículo.",
+                keywords: ["motor", "automóvil", "energía mecánica", "combustión", "eléctrico"]
+            },
+            {
+                question: "¿Cuáles son los tipos de motores más comunes?",
+                answerd: "Motor de combustión interna (gasolina y diésel), motor eléctrico e híbrido (combina ambos tipos).",
+                keywords: ["motor de combustión", "motor eléctrico", "híbrido", "gasolina", "diésel"]
+            },
+            {
+                question: "¿Cómo funciona un motor de combustión interna?",
+                answerd: "Quema combustible dentro de un cilindro para crear una explosión que empuja un pistón, generando movimiento.",
+                keywords: ["combustión interna", "cilindros", "pistón", "explosión", "funcionamiento"]
+            },
+            {
+                question: "¿Qué es el torque y por qué es importante?",
+                answerd: "El torque es la fuerza que hace girar el motor; es esencial para la aceleración y la capacidad de carga del vehículo.",
+                keywords: ["torque", "fuerza", "aceleración", "motor", "rendimiento"]
+            },
+            {
+                question: "¿Cómo se mantiene un motor en buen estado?",
+                answerd: "Mediante cambios de aceite, filtros, revisión de bujías, refrigerante y mantenimiento regular.",
+                keywords: ["mantenimiento de motor", "aceite", "filtros", "bujías", "refrigerante"]
+            }
+        ]
+    },
+    {
+        subtheme: "cilindros",
+        title: "Cilindros del Motor",
+        description: "Cámaras dentro del motor donde ocurre la combustión que impulsa los pistones.",
+        questions: [
+            {
+                question: "¿Qué es un cilindro en un motor?",
+                answerd: "Es la cámara donde el combustible se quema y genera la energía que empuja el pistón.",
+                keywords: ["cilindro", "motor", "combustión", "pistón", "energía"]
+            },
+            {
+                question: "¿Qué significa que un motor tenga 4, 6 u 8 cilindros?",
+                answerd: "Indica el número de cámaras de combustión; a más cilindros, mayor potencia y consumo.",
+                keywords: ["motor 4 cilindros", "motor 6 cilindros", "motor 8 cilindros", "potencia", "eficiencia"]
+            },
+            {
+                question: "¿Cómo influye la cantidad de cilindros en el rendimiento del vehículo?",
+                answerd: "Más cilindros proporcionan mayor potencia y suavidad, pero consumen más combustible.",
+                keywords: ["rendimiento", "potencia", "cilindros", "consumo", "eficiencia"]
+            },
+            {
+                question: "¿Qué es la configuración de los cilindros?",
+                answerd: "Es la forma en que están dispuestos los cilindros: en línea, en V o bóxer.",
+                keywords: ["configuración de cilindros", "en línea", "en V", "bóxer"]
+            },
+            {
+                question: "¿Puede fallar un cilindro? ¿Qué lo causa?",
+                answerd: "Sí, por problemas en bujías, válvulas, inyectores o anillos del pistón, lo que causa pérdida de potencia.",
+                keywords: ["falla de cilindro", "bujías", "válvulas", "inyectores", "pérdida de potencia"]
+            }
+        ]
+    },
+    {
+        subtheme: "kilometrajes",
+        title: "Kilometraje del Vehículo",
+        description: "Distancia total recorrida por un vehículo, indicador clave para evaluar desgaste y valor.",
+        questions: [
+            {
+                question: "¿Qué es el kilometraje de un auto?",
+                answerd: "Es la cantidad total de kilómetros que ha recorrido el vehículo desde su fabricación.",
+                keywords: ["kilometraje", "odómetro", "distancia recorrida", "vehículo"]
+            },
+            {
+                question: "¿Por qué es importante el kilometraje?",
+                answerd: "Ayuda a estimar el desgaste del vehículo y su necesidad de mantenimiento o reemplazo de partes.",
+                keywords: ["importancia kilometraje", "desgaste", "mantenimiento", "vida útil"]
+            },
+            {
+                question: "¿Cuánto kilometraje se considera alto para un auto usado?",
+                answerd: "Generalmente más de 150,000 km, aunque depende del mantenimiento y tipo de uso.",
+                keywords: ["kilometraje alto", "auto usado", "mantenimiento", "vida útil"]
+            },
+            {
+                question: "¿Se puede modificar el kilometraje de un auto?",
+                answerd: "Sí, aunque es ilegal en muchos países y considerado fraude si no se informa.",
+                keywords: ["modificar kilometraje", "fraude", "odómetro", "legalidad"]
+            },
+            {
+                question: "¿Cómo mantener un buen kilometraje promedio?",
+                answerd: "Conduciendo eficientemente, evitando aceleraciones bruscas y manteniendo el vehículo al día.",
+                keywords: ["kilometraje eficiente", "conducción", "mantenimiento", "ahorro de combustible"]
+            }
+        ]
+    },
+    {
+        subtheme: "carroceria",
+        title: "Carrocería",
+        description: "Estructura externa del vehículo que le da forma, protege a los ocupantes y determina su aerodinámica.",
+        questions: [
+            {
+                question: "¿Qué es la carrocería de un vehículo?",
+                answerd: "Es la estructura externa visible del vehículo, que le da su forma y protege a los pasajeros.",
+                keywords: ["carrocería", "estructura", "protección", "forma", "vehículo"]
+            },
+            {
+                question: "¿Qué tipos de carrocería existen?",
+                answerd: "Sedán, coupé, hatchback, SUV, camioneta, convertible, entre otros.",
+                keywords: ["tipos de carrocería", "sedán", "SUV", "camioneta", "hatchback"]
+            },
+            {
+                question: "¿Qué función tiene la carrocería en la seguridad del auto?",
+                answerd: "Absorbe impactos, protege a los ocupantes y ayuda en la distribución de la energía en colisiones.",
+                keywords: ["carrocería", "seguridad", "impactos", "protección", "estructura"]
+            },
+            {
+                question: "¿Qué materiales se usan en la carrocería?",
+                answerd: "Acero, aluminio, fibra de carbono y plásticos reforzados, según el modelo y uso.",
+                keywords: ["materiales carrocería", "acero", "aluminio", "fibra de carbono"]
+            },
+            {
+                question: "¿Qué es la aerodinámica en la carrocería?",
+                answerd: "Es la capacidad del diseño para reducir la resistencia al viento, mejorando la eficiencia y estabilidad.",
+                keywords: ["aerodinámica", "resistencia", "forma", "eficiencia", "velocidad"]
+            }
+        ]
+    },
+    {
+        subtheme: "traccion",
+        title: "Tracción del Vehículo",
+        description: "Sistema que transfiere la potencia del motor a las ruedas, determinando el comportamiento del auto en diferentes terrenos.",
+        questions: [
+            {
+                question: "¿Qué es la tracción en un automóvil?",
+                answerd: "Es la forma en que la potencia del motor se distribuye a las ruedas para mover el vehículo.",
+                keywords: ["tracción", "potencia", "ruedas", "vehículo", "motor"]
+            },
+            {
+                question: "¿Qué tipos de tracción existen?",
+                answerd: "Tracción delantera (FWD), trasera (RWD), total (AWD) y 4x4 (4WD), cada una con ventajas y usos específicos.",
+                keywords: ["tipos de tracción", "FWD", "RWD", "AWD", "4x4"]
+            },
+            {
+                question: "¿Cuál es la diferencia entre tracción AWD y 4x4?",
+                answerd: "AWD es permanente y automática, ideal para carretera; 4x4 es manual y se usa para terrenos difíciles.",
+                keywords: ["AWD", "4x4", "diferencias", "terrenos", "vehículo"]
+            },
+            {
+                question: "¿Qué ventajas tiene la tracción total?",
+                answerd: "Mejora la estabilidad, agarre en curvas y desempeño en condiciones climáticas adversas.",
+                keywords: ["ventajas tracción total", "estabilidad", "agarre", "lluvia", "nieve"]
+            },
+            {
+                question: "¿Influye la tracción en el consumo de combustible?",
+                answerd: "Sí, los sistemas con tracción total o 4x4 suelen consumir más debido a su peso y complejidad mecánica.",
+                keywords: ["consumo combustible", "tracción", "eficiencia", "AWD", "peso"]
+            }
+        ]
+    }
+]
 
-}
-
-const Anatomia = {
-
-}
-
-const Tecnologia = {
-
-}
-
-const Automoviles = {
-
-}
-
-const Biologia = {
-
-}
-
-const Cultura_mexicana = {
-
-}
+const Biologia = [
+    {
+        subtheme: "fotosintesis",
+        title: "Fotosíntesis en Plantas",
+        description: "Proceso bioquímico mediante el cual las plantas transforman la energía lumínica en energía química",
+        questions: [
+            {
+                question: "¿Qué es la fotosíntesis?",
+                answerd: "La fotosíntesis es el proceso mediante el cual las plantas, algas y algunas bacterias convierten la energía de la luz solar en energía química almacenada en moléculas orgánicas como la glucosa. Este proceso ocurre en los cloroplastos y requiere dióxido de carbono, agua y luz, liberando oxígeno como subproducto.",
+                keywords: ["proceso", "plantas", "cloroplastos", "luz solar", "glucosa", "oxígeno"]
+            },
+            {
+                question: "¿Cuáles son las fases principales de la fotosíntesis?",
+                answerd: "La fotosíntesis consta de dos fases principales: 1) La fase luminosa o dependiente de la luz, donde se captura energía solar y se produce ATP y NADPH, y 2) La fase oscura o ciclo de Calvin, donde se utiliza la energía almacenada para fijar el CO2 y sintetizar glucosa.",
+                keywords: ["fase luminosa", "fase oscura", "ciclo de Calvin", "ATP", "NADPH"]
+            },
+            {
+                question: "¿Qué pigmentos participan en la fotosíntesis?",
+                answerd: "El principal pigmento fotosintético es la clorofila, que existe en formas a y b. Además existen pigmentos accesorios como los carotenoides (carotenos y xantofilas) y las ficobilinas en ciertas algas, que amplían el espectro de luz aprovechable.",
+                keywords: ["clorofila", "pigmentos", "carotenoides", "luz visible", "absorción"]
+            },
+            {
+                question: "¿Qué factores afectan la tasa fotosintética?",
+                answerd: "Los principales factores son: intensidad luminosa, concentración de CO2, temperatura, disponibilidad de agua y nutrientes minerales. Cada factor tiene un rango óptimo y puede limitar el proceso si está en defecto o exceso.",
+                keywords: ["factores limitantes", "intensidad lumínica", "temperatura", "agua", "nutrientes"]
+            },
+            {
+                question: "¿Qué importancia ecológica tiene la fotosíntesis?",
+                answerd: "La fotosíntesis es fundamental para la vida en la Tierra porque: 1) Produce el oxígeno atmosférico, 2) Fija el CO2 reduciendo el efecto invernadero, 3) Genera la materia orgánica que sustenta las cadenas tróficas, y 4) Mantiene el equilibrio de los ecosistemas.",
+                keywords: ["importancia", "oxígeno", "cadena alimenticia", "ecosistemas", "ciclo del carbono"]
+            }
+        ]
+    },
+    {
+        subtheme: "enzimas",
+        title: "Enzimas y Catálisis Biológica",
+        description: "Proteínas especializadas que aceleran reacciones químicas en los organismos vivos",
+        questions: [
+            {
+                question: "¿Qué son las enzimas y cómo funcionan?",
+                answerd: "Las enzimas son proteínas catalizadoras que aceleran las reacciones bioquímicas sin consumirse. Funcionan reduciendo la energía de activación necesaria para que ocurra la reacción, gracias a su sitio activo donde se une específicamente el sustrato. Son altamente específicas y su actividad depende de condiciones óptimas de pH y temperatura.",
+                keywords: ["proteínas", "catalizadores", "sitio activo", "energía de activación", "especificidad"]
+            },
+            {
+                question: "¿Qué diferencia a las enzimas de otros catalizadores?",
+                answerd: "Las enzimas se distinguen por: 1) Ser biológicas y generalmente proteicas, 2) Mayor especificidad por su sustrato, 3) Mayor eficiencia catalítica (pueden acelerar reacciones hasta 10^17 veces), 4) Operar en condiciones suaves de temperatura y pH, y 5) Ser regulables por inhibidores o moduladores.",
+                keywords: ["comparación", "catalizadores químicos", "eficiencia", "regulación", "condiciones suaves"]
+            },
+            {
+                question: "¿Cómo se clasifican las enzimas?",
+                answerd: "Las enzimas se clasifican en 6 clases principales según la reacción que catalizan: 1) Oxidorreductasas (transferencia de electrones), 2) Transferasas (transferencia de grupos funcionales), 3) Hidrolasas (rotura por agua), 4) Liasas (adición a dobles enlaces), 5) Isomerasas (reordenamientos intramoleculares), y 6) Ligasas (formación de enlaces con ATP).",
+                keywords: ["clasificación", "EC numbers", "tipos de reacciones", "nomenclatura"]
+            },
+            {
+                question: "¿Qué factores afectan la actividad enzimática?",
+                answerd: "Los principales factores son: 1) Temperatura (aumenta actividad hasta punto óptimo), 2) pH (cada enzima tiene pH óptimo), 3) Concentración de sustrato (hasta saturación), 4) Presencia de cofactores o coenzimas, y 5) Inhibidores competitivos o alostéricos que reducen la actividad.",
+                keywords: ["temperatura", "pH", "saturación", "inhibidores", "coenzimas"]
+            },
+            {
+                question: "¿Qué aplicaciones tienen las enzimas en la industria?",
+                answerd: "Las enzimas tienen múltiples aplicaciones: 1) Alimentaria (quesos, pan, jugos), 2) Detergentes (lipasas, proteasas), 3) Medicina (diagnóstico, terapéutica), 4) Biotecnología (PCR con Taq polimerasa), y 5) Bioenergía (producción de biocombustibles). Son preferidas por ser biodegradables y trabajar en condiciones suaves.",
+                keywords: ["aplicaciones", "industria alimentaria", "detergentes", "biotecnología", "medicina"]
+            }
+        ]
+    },
+    {
+        subtheme: "animales",
+        title: "Reino Animal y su Diversidad",
+        description: "Características, clasificación y adaptaciones de los organismos del reino Animalia",
+        questions: [
+            {
+                question: "¿Qué características definen a los animales?",
+                answerd: "Los animales son organismos eucariotas, multicelulares, heterótrofos (ingestión), con tejidos diferenciados (excepto poríferos), capacidad de movimiento en algún estadio vital, reproducción generalmente sexual, desarrollo embrionario con blastulación y gastrulación, y presencia de colágeno como proteína estructural característica.",
+                keywords: ["eucariotas", "heterótrofos", "movimiento", "tejidos", "reproducción sexual"]
+            },
+            {
+                question: "¿Cómo se clasifican los principales grupos animales?",
+                answerd: "Los animales se clasifican según: 1) Presencia/ausencia de columna vertebral (vertebrados/invertebrados), 2) Simetría corporal (radial/bilateral), 3) Capas germinales (diploblásticos/triploblásticos), 4) Desarrollo embrionario (protóstomos/deuteróstomos), y 5) Plan corporal (segmentación, cavidades corporales). Los filos principales incluyen artrópodos, moluscos, anélidos, cordados, etc.",
+                keywords: ["vertebrados", "invertebrados", "simetría", "filos", "clasificación"]
+            },
+            {
+                question: "¿Qué adaptaciones permitieron a los animales colonizar tierra firme?",
+                answerd: "Las adaptaciones clave fueron: 1) Sistemas de soporte esquelético, 2) Mecanismos para prevenir la desecación (piel queratinizada), 3) Sistemas respiratorios eficientes (pulmones), 4) Reproducción independiente del agua (huevos amnióticos o viviparidad), 5) Sistemas excretores conservadores de agua, y 6) Termorregulación.",
+                keywords: ["adaptaciones", "transición agua-tierra", "evolución", "amniotas", "termorregulación"]
+            },
+            {
+                question: "¿Qué son los patrones de desarrollo embrionario en animales?",
+                answerd: "El desarrollo embrionario sigue etapas como segmentación (cleavage), gastrulación (formación de capas germinales), y organogénesis. Los patrones difieren en protóstomos (blastóporo forma boca, cleavage espiral) vs deuteróstomos (blastóporo forma ano, cleavage radial). La celoma formación puede ser esquizocélica o enterocélica.",
+                keywords: ["embriología", "protóstomos", "deuteróstomos", "capas germinales", "celoma"]
+            },
+            {
+                question: "¿Qué importancia ecológica tienen los animales?",
+                answerd: "Los animales cumplen roles cruciales como: 1) Consumidores en cadenas tróficas, 2) Polinizadores y dispersores de semillas, 3) Recicladores de nutrientes (descomponedores), 4) Ingenieros de ecosistemas (constructores de hábitats), 5) Indicadores de salud ambiental, y 6) Fuente de recursos para humanos (alimento, materiales).",
+                keywords: ["roles ecológicos", "cadenas alimenticias", "biodiversidad", "servicios ecosistémicos", "conservación"]
+            }
+        ]
+    },
+    {
+        subtheme: "temas_evolutivos",
+        title: "Teorías y Mecanismos de la Evolución",
+        description: "Procesos que explican la diversificación y adaptación de las especies a través del tiempo",
+        questions: [
+            {
+                question: "¿Qué evidencia apoya la teoría de la evolución?",
+                answerd: "La evolución está respaldada por: 1) Registro fósil que muestra cambios graduales, 2) Anatomía comparada (estructuras homólogas), 3) Embriología comparada (etapas similares), 4) Distribución biogeográfica, 5) Bioquímica comparada (ADN y proteínas similares), y 6) Observaciones directas (resistencia a antibióticos, especiación).",
+                keywords: ["evidencia", "fósiles", "anatomía comparada", "ADN", "biogeografía"]
+            },
+            {
+                question: "¿Cómo actúa la selección natural según Darwin?",
+                answerd: "La selección natural opera cuando: 1) Existe variación heredable en una población, 2) Los organismos producen más descendencia de la que puede sobrevivir, 3) Los individuos con rasgos ventajosos tienen mayor fitness (éxito reproductivo), lo que lleva a que esos rasgos aumenten en frecuencia en generaciones posteriores. No es aleatoria sino dirigida por el ambiente.",
+                keywords: ["Darwin", "mecanismo", "variación", "fitness", "adaptación"]
+            },
+            {
+                question: "¿Qué otros mecanismos evolutivos existen además de la selección natural?",
+                answerd: "Otros mecanismos incluyen: 1) Deriva genética (cambios aleatorios en pequeñas poblaciones), 2) Flujo génico (intercambio de genes entre poblaciones), 3) Mutaciones (fuente de nueva variación), 4) Apareamiento no aleatorio (selección sexual), y 5) Especiación (formación de nuevas especies por aislamiento reproductivo).",
+                keywords: ["deriva genética", "flujo génico", "mutaciones", "selección sexual", "especiación"]
+            },
+            {
+                question: "¿Qué es la especiación y cómo ocurre?",
+                answerd: "La especiación es el proceso de formación de nuevas especies. Ocurre cuando poblaciones se aíslan reproductivamente por: 1) Barreras geográficas (especiación alopátrica), 2) Barreras ecológicas o conductuales (especiación simpátrica), o 3) Barreras genéticas (polipoidía en plantas). El aislamiento reproductivo puede ser precigótico (evita apareamiento) o postcigótico (híbridos inviables).",
+                keywords: ["nuevas especies", "aislamiento reproductivo", "alopátrica", "simpátrica", "barreras"]
+            },
+            {
+                question: "¿Qué son los patrones macroevolutivos?",
+                answerd: "La macroevolución estudia cambios a gran escala como: 1) Radiación adaptativa (diversificación rápida), 2) Extinciones masivas y eventos de especiación, 3) Coevolución (interacciones especies), 4) Evolución convergente (rasgos similares en linajes no relacionados), y 5) Tasas evolutivas (equilibrio puntuado vs gradualismo). Estos patrones emergen de procesos microevolutivos actuando a largo plazo.",
+                keywords: ["macroevolución", "radiación adaptativa", "extinciones", "convergencia", "tasas evolutivas"]
+            }
+        ]
+    },
+    {
+        subtheme: "reinos_existentes",
+        title: "Clasificación de los Seres Vivos en Reinos",
+        description: "Sistemas de clasificación biológica y características distintivas de los principales reinos",
+        questions: [
+            {
+                question: "¿Cuáles son los reinos biológicos principales?",
+                answerd: "En el sistema de 5 reinos (Whittaker) son: 1) Animalia (organismos móviles heterótrofos), 2) Plantae (autótrofos fotosintéticos), 3) Fungi (heterótrofos con absorción, pared de quitina), 4) Protista (eucariotas diversos, parafilético), y 5) Monera (procariotas, ahora divididos en Bacteria y Archaea). Actualmente se usan sistemas más modernos como los 3 dominios (Bacteria, Archaea, Eukarya).",
+                keywords: ["5 reinos", "Whittaker", "Animalia", "Plantae", "Fungi", "Protista", "Monera"]
+            },
+            {
+                question: "¿Qué características distinguen a los reinos Bacteria y Archaea?",
+                answerd: "Bacteria y Archaea son procariotas pero difieren en: 1) Composición de pared celular (peptidoglicano en bacterias), 2) Membranas lipídicas (enlaces éter en Archaea), 3) Genética (Archaea tiene procesos más similares a eucariotas), 4) Hábitats (Archaea en extremos), y 5) Sensibilidad a antibióticos. Archaea está más relacionada evolutivamente a eucariotas.",
+                keywords: ["procariotas", "diferencias", "extremófilos", "pared celular", "filogenia"]
+            },
+            {
+                question: "¿Por qué el reino Protista se considera parafilético?",
+                answerd: "Protista es parafilético porque incluye organismos eucariotas diversos que no son animales, plantas ni hongos, pero no incluye todos los descendientes de su ancestro común (pues animales, plantas y hongos evolucionaron de protistas). Contiene grupos no relacionados como algas, protozoos y mohos mucilaginosos, por lo que los sistemas modernos los dividen en supergrupos eucarióticos.",
+                keywords: ["parafilético", "eucariotas", "algas", "protozoos", "clasificación moderna"]
+            },
+            {
+                question: "¿Qué adaptaciones permitieron a las plantas colonizar tierra firme?",
+                answerd: "Las adaptaciones clave fueron: 1) Cutícula cerosa para prevenir desecación, 2) Estomas para intercambio gaseoso, 3) Tejidos vasculares (xilema/floema) para transporte, 4) Raíces para absorción y anclaje, 5) Estructuras reproductivas protegidas (semillas), y 6) Pigmentos accesorios para protección UV. Las briofitas carecen de algunas pero las traqueofitas las tienen todas.",
+                keywords: ["transición a tierra", "adaptaciones vegetales", "tejidos vasculares", "cutícula", "estomas"]
+            },
+            {
+                question: "¿Qué características únicas tienen los hongos?",
+                answerd: "Los hongos se caracterizan por: 1) Nutrición por absorción (secretan enzimas), 2) Pared celular de quitina, 3) Cuerpo filamentoso (hifas que forman micelio), 4) Reproducción por esporas, 5) Almacenamiento de glucógeno (como animales), y 6) Formar relaciones simbióticas (micorrizas, líquenes). Son más cercanos evolutivamente a animales que a plantas.",
+                keywords: ["quitina", "hifas", "micelio", "esporas", "relaciones simbióticas"]
+            }
+        ]
+    },
+    {
+        subtheme: "virus",
+        title: "Virus: Estructura y Replicación",
+        description: "Características de los virus y su interacción con los organismos hospedadores",
+        questions: [
+            {
+                question: "¿Los virus son seres vivos? ¿Por qué?",
+                answerd: "Los virus se consideran en la frontera entre lo vivo y lo inerte porque: 1) Tienen material genético (ADN o ARN) pero no metabolismo propio, 2) Pueden evolucionar pero no crecer o reproducirse independientemente, 3) No tienen organización celular ni realizan funciones vitales fuera de un huésped. La mayoría de científicos los considera entidades biológicas pero no organismos vivos.",
+                keywords: ["definición de vida", "características", "parasitos obligados", "discusión científica"]
+            },
+            {
+                question: "¿Cómo se clasifican los virus?",
+                answerd: "Los virus se clasifican principalmente por: 1) Tipo de ácido nucleico (ADN/ARN, cadena simple/doble), 2) Presencia de envoltura lipídica, 3) Simetría de la cápside (icosaédrica, helicoidal, compleja), 4) Mecanismo de replicación, y 5) Organismo huésped (animales, plantas, bacterias - bacteriófagos). El sistema ICTV usa taxonomía con órdenes, familias, géneros y especies virales.",
+                keywords: ["clasificación", "ADN viral", "ARN viral", "cápside", "bacteriófagos"]
+            },
+            {
+                question: "¿Qué ciclos de replicación viral existen?",
+                answerd: "Los virus tienen dos ciclos principales: 1) Ciclo lítico (virus se replica rápidamente, lisando la célula para liberar progenie), y 2) Ciclo lisogénico (material genético viral se integra al huésped y replica pasivamente hasta que se induce el ciclo lítico). Algunos virus tienen ciclos persistentes (liberación continua sin lisis) o transforman células (como oncovirus).",
+                keywords: ["ciclo lítico", "ciclo lisogénico", "lisogenia", "replicación", "liberación viral"]
+            },
+            {
+                question: "¿Qué son los retrovirus y cómo funcionan?",
+                answerd: "Los retrovirus son virus ARN que usan la transcriptasa inversa para convertir su ARN en ADN que se integra al genoma huésped (provirus). Ejemplo paradigmático es el VIH. Su replicación implica: 1) Conversión de ARN→ADN, 2) Integración al ADN huésped, 3) Transcripción de genes virales por maquinaria celular, y 4) Ensamblaje de nuevas partículas virales que brotan de la célula.",
+                keywords: ["retrovirus", "VIH", "transcriptasa inversa", "provirus", "ciclo replicativo"]
+            },
+            {
+                question: "¿Qué papel ecológico y evolutivo tienen los virus?",
+                answerd: "Los virus son importantes porque: 1) Controlan poblaciones microbianas (regulación ecológica), 2) Facilitan transferencia horizontal de genes entre especies (contribución evolutiva), 3) Afectan ciclos biogeoquímicos (como en océanos), 4) Han moldeado sistemas inmunes, y 5) Endovirus pueden conferir beneficios a huéspedes. Se estima que son la entidad biológica más abundante en la Tierra.",
+                keywords: ["rol ecológico", "transferencia genética", "evolución", "abundancia", "simbiosis virales"]
+            }
+        ]
+    },
+    {
+        subtheme: "celulas",
+        title: "Estructura y Función Celular",
+        description: "Organización de los sistemas celulares en procariotas y eucariotas",
+        questions: [
+            {
+                question: "¿Cuáles son las diferencias entre células procariotas y eucariotas?",
+                answerd: "Las principales diferencias son: 1) Presencia de núcleo definido (eucariotas) vs nucleoide (procariotas), 2) Tamaño (eucariotas 10-100μm, procariotas 1-5μm), 3) Organelas membranosas (eucariotas tienen mitocondrias, RE, Golgi), 4) Citoplasma organizado (citoesqueleto en eucariotas), 5) División celular (mitosis/meiosis vs fisión binaria), y 6) Ribosomas (80S vs 70S).",
+                keywords: ["comparación", "núcleo", "organelas", "tamaño", "ribosomas"]
+            },
+            {
+                question: "¿Qué funciones cumplen las principales organelas celulares?",
+                answerd: "Las organelas clave y sus funciones son: 1) Núcleo (almacena ADN, control celular), 2) Mitocondrias (respiración celular, ATP), 3) Retículo endoplasmático (síntesis proteica -RER- y lípidos -REL-), 4) Aparato de Golgi (modificación, empaquetado moléculas), 5) Lisosomas (digestión intracelular), 6) Cloroplastos (fotosíntesis en plantas), y 7) Vacuolas (almacenamiento, presión de turgencia).",
+                keywords: ["funciones", "mitocondrias", "Golgi", "retículo", "lisosomas"]
+            },
+            {
+                question: "¿Cómo se organiza el citoesqueleto y qué funciones tiene?",
+                answerd: "El citoesqueleto consta de: 1) Microfilamentos (actina, 7nm, movimiento y forma), 2) Microtúbulos (tubulina, 25nm, 'vías' celulares, huso mitótico), y 3) Filamentos intermedios (variados, 8-12nm, soporte mecánico). Funciones incluyen: soporte estructural, movimiento celular (cilios, flagelos), transporte intracelular, división celular, y mantenimiento de la forma.",
+                keywords: ["microfilamentos", "microtúbulos", "actina", "tubulina", "movimiento celular"]
+            },
+            {
+                question: "¿Qué es el ciclo celular y cómo se regula?",
+                answerd: "El ciclo celular es el proceso ordenado de crecimiento y división con fases: G1 (crecimiento), S (replicación ADN), G2 (preparación), M (mitosis), y G0 (reposo). Se regula por: 1) Ciclinas y quinasas dependientes (CDKs) que forman complejos activadores, 2) Puntos de control (checkpoints) que verifican condiciones, y 3) Señales externas/internas (factores de crecimiento, daño al ADN). Fallas en regulación llevan a cáncer.",
+                keywords: ["fases", "mitosis", "ciclinas", "puntos de control", "regulación"]
+            },
+            {
+                question: "¿Qué diferencias hay entre células vegetales y animales?",
+                answerd: "Las células vegetales tienen: 1) Pared celular de celulosa, 2) Cloroplastos, 3) Gran vacuola central, 4) Plasmodesmos (vs uniones en animales), y carecen de: 1) Centriolos (en la mayoría), 2) Lisosomas típicos, y 3) Matriz extracelular como en animales. Ambas tienen mitocondrias pero plantas usan principalmente para funciones no fotosintéticas.",
+                keywords: ["pared celular", "cloroplastos", "vacuola", "plasmodesmos", "diferencias estructurales"]
+            }
+        ]
+    }
+];
