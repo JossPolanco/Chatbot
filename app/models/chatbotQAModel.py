@@ -1,5 +1,5 @@
 from app.utils.db_utils import get_db, get_collection, print_document
-class ChatbotModel():
+class ChatbotQAModel():
     def __init__(self) -> None:
         self.db = get_db()
     
@@ -25,6 +25,8 @@ class ChatbotModel():
                 },
             },
         '''
+        
+        return questions
     
     def find_answerd(self, topic):
         collection = get_collection(topic)
