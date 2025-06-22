@@ -28,6 +28,31 @@ class ChatbotQAModel():
         
         return questions
     
+    def get_questions_limited(self, topic, limit):
+        collection = get_collection(topic)
+        # in the collection finds all documents but only including the question
+        documents = collection.find({}, {'questions.question': 1}).limit(limit)
+        
+        # list to storage the questions
+        questions = []
+        
+        # Iterate each doc, and in each doc iterate each "questions" field and iterates each question in the "questions" field
+        for doc in documents:                       
+            for question in doc.get('questions', [])[:limit]:
+                if 'question' in question:
+                    questions.append(question['question'])        
+        
+        ''' VISUAL EXAMPLE
+        document { 
+            questions: [
+                {
+                question: '¿Qué es una fracción?',
+                },
+            },
+        '''
+        
+        return questions
+    
     def find_answerd(self, topic):
         collection = get_collection(topic)
         documents = collection.find().limit(2)

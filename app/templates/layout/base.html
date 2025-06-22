@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <!-- Awesomplete CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/awesomplete.css') }}" />
+    <!-- CDN AwesomeFonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CDN Tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>{% block title %}{% endblock %}</title>
 </head>
@@ -14,7 +18,8 @@
 
     <footer>{% block footer %}{% endblock %}</footer>
 
-    <script></script>
+    <!-- Awesomplete JS -->
+    <script src="{{ url_for('static', filename='javascript/awesomplete.js') }}"></script>
     {% block script %}{% endblock %}
 </body>
 </html>
