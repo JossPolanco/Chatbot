@@ -245,6 +245,134 @@ const Matematicas = [
                 keywords: ["cuantos", "numeros", "primos", "infinitos", "demostrado", "euclides", "2000", "años", "menos", "frecuentes", "crecen", "agotan", "millones", "digitos"]
             },
         ]
+    },
+    {
+        subtheme: "maximo_comun_divisor",
+        title: "Máximo Común Divisor (MCD)",
+        description: "Mayor número que divide exactamente a dos o más números sin dejar residuo.",
+        questions: [
+            {
+                question: "¿Qué es el Máximo Común Divisor (MCD)?",
+                answerd: "Es el número más grande que divide exactamente a dos o más números. Por ejemplo, el MCD de 12 y 18 es 6.",
+                keywords: ["MCD", "máximo común divisor", "división exacta", "matemáticas básicas"]
+            },
+            {
+                question: "¿Cómo calcular el MCD usando descomposición en factores primos?",
+                answerd: "1. Descompón cada número en factores primos. Ej: 12 = 2×2×3, 18 = 2×3×3. 2. Identifica los factores comunes. 3. Multiplica los factores comunes. En este caso: 2×3 = 6.",
+                keywords: ["MCD", "factores primos", "método", "descomposición", "ejemplo"]
+            },
+            {
+                question: "¿Cómo calcular el MCD usando el método de restas sucesivas?",
+                answerd: "Resta el número menor al mayor repetidamente hasta que ambos números sean iguales. Ese número es el MCD. Ej: MCD(48,18) → 48-18=30, 30-18=12, 18-12=6, 12-6=6, 6-6=0 ⇒ MCD=6.",
+                keywords: ["método restas", "MCD", "método Euclides", "matemáticas"]
+            },
+            {
+                question: "¿Cómo usar el algoritmo de Euclides para hallar el MCD?",
+                answerd: "Divide el número mayor entre el menor y luego reemplaza el mayor por el menor y el menor por el residuo. Repite hasta que el residuo sea 0. El último divisor es el MCD.",
+                keywords: ["Euclides", "MCD", "algoritmo", "división", "residuo"]
+            },
+            {
+                question: "¿Para qué sirve el MCD en la vida cotidiana?",
+                answerd: "Sirve para repartir cosas en partes iguales, como cortar una cuerda en tramos iguales sin desperdicio.",
+                keywords: ["uso MCD", "vida real", "división exacta", "aplicaciones prácticas"]
+            }
+        ]
+    },
+    {
+        subtheme: "minimo_comun_multiplo",
+        title: "Mínimo Común Múltiplo (MCM)",
+        description: "El menor número múltiplo común entre dos o más números.",
+        questions: [
+            {
+                question: "¿Qué es el Mínimo Común Múltiplo (MCM)?",
+                answerd: "Es el menor número que es múltiplo de dos o más números. Por ejemplo, el MCM de 4 y 6 es 12.",
+                keywords: ["MCM", "mínimo común múltiplo", "múltiplos", "matemáticas"]
+            },
+            {
+                question: "¿Cómo calcular el MCM usando factores primos?",
+                answerd: "1. Descompón los números en factores primos. Ej: 4 = 2×2, 6 = 2×3. 2. Toma todos los factores, usando los de mayor exponente: 2²×3 = 12.",
+                keywords: ["MCM", "factores primos", "método", "ejemplo", "multiplicación"]
+            },
+            {
+                question: "¿Cómo se relaciona el MCM con el MCD?",
+                answerd: "MCM(a, b) = (a × b) / MCD(a, b). Ej: MCM(4,6) = (4×6)/2 = 24/2 = 12.",
+                keywords: ["relación MCM y MCD", "fórmula", "múltiplos", "divisores"]
+            },
+            {
+                question: "¿Cómo calcular el MCM listando múltiplos?",
+                answerd: "Escribe varios múltiplos de ambos números hasta encontrar el primero en común. Ej: 4: 4,8,12; 6: 6,12 ⇒ MCM=12.",
+                keywords: ["múltiplos", "lista", "método básico", "MCM"]
+            },
+            {
+                question: "¿En qué situaciones prácticas se usa el MCM?",
+                answerd: "Para sincronizar eventos que ocurren a diferentes intervalos, como encender luces cada 4 y 6 minutos simultáneamente.",
+                keywords: ["uso MCM", "vida diaria", "tiempos", "intervalos"]
+            }
+        ]
+    },
+    {
+        subtheme: "calcular_areas",
+        title: "Calcular Áreas",
+        description: "Proceso de medir la superficie que ocupa una figura geométrica.",
+        questions: [
+            {
+                question: "¿Cómo se calcula el área de un rectángulo?",
+                answerd: "Multiplica la base por la altura. Ejemplo: base = 5 cm, altura = 3 cm ⇒ Área = 5 × 3 = 15 cm².",
+                keywords: ["área", "rectángulo", "fórmula", "base", "altura"]
+            },
+            {
+                question: "¿Cómo se calcula el área de un triángulo?",
+                answerd: "Multiplica la base por la altura y divide entre 2. Ejemplo: base = 6 cm, altura = 4 cm ⇒ Área = (6 × 4)/2 = 12 cm².",
+                keywords: ["área triángulo", "base", "altura", "división", "fórmula"]
+            },
+            {
+                question: "¿Cómo se calcula el área de un círculo?",
+                answerd: "Se usa la fórmula A = π × r². Si el radio es 3 cm ⇒ Área = π × 3² = π × 9 ≈ 28.27 cm².",
+                keywords: ["área círculo", "π", "radio", "pi", "fórmula"]
+            },
+            {
+                question: "¿Cómo calcular el área de un trapecio?",
+                answerd: "Fórmula: A = (base mayor + base menor) × altura ÷ 2. Ej: (6 + 4) × 3 ÷ 2 = 15 cm².",
+                keywords: ["área trapecio", "bases", "altura", "fórmula", "geometría"]
+            },
+            {
+                question: "¿Para qué sirve calcular áreas en la vida real?",
+                answerd: "Para medir superficies como terrenos, pisos, paredes, o materiales de construcción.",
+                keywords: ["uso de áreas", "superficies", "vida real", "medición"]
+            }
+        ]
+    },
+    {
+        subtheme: "teorema_pitagoras",
+        title: "Teorema de Pitágoras",
+        description: "Relación matemática en triángulos rectángulos entre los catetos y la hipotenusa.",
+        questions: [
+            {
+                question: "¿Qué dice el teorema de Pitágoras?",
+                answerd: "En un triángulo rectángulo, el cuadrado de la hipotenusa es igual a la suma de los cuadrados de los catetos: a² + b² = c².",
+                keywords: ["teorema de Pitágoras", "triángulo rectángulo", "hipotenusa", "catetos"]
+            },
+            {
+                question: "¿Cómo usar el teorema de Pitágoras para hallar la hipotenusa?",
+                answerd: "Si a = 3 y b = 4, entonces c² = 3² + 4² = 9 + 16 = 25 ⇒ c = √25 = 5.",
+                keywords: ["hipotenusa", "triángulo", "pitágoras", "ejemplo", "raíz cuadrada"]
+            },
+            {
+                question: "¿Cómo usar el teorema para hallar un cateto?",
+                answerd: "Si c = 13 y a = 5, entonces b² = 13² - 5² = 169 - 25 = 144 ⇒ b = √144 = 12.",
+                keywords: ["hallar cateto", "pitágoras", "triángulo", "resta de cuadrados"]
+            },
+            {
+                question: "¿Cuándo se puede usar el teorema de Pitágoras?",
+                answerd: "Solo en triángulos rectángulos, donde uno de los ángulos es de 90 grados.",
+                keywords: ["uso pitágoras", "ángulo recto", "triángulo", "condición"]
+            },
+            {
+                question: "¿Qué aplicaciones tiene el teorema de Pitágoras?",
+                answerd: "Se usa en construcción, navegación, diseño gráfico y para calcular distancias en mapas o planos.",
+                keywords: ["aplicaciones", "distancia", "construcción", "uso real", "planos"]
+            }
+        ]
     }
 ]
 
@@ -378,6 +506,134 @@ const Historia = [
                 question: "¿Por qué terminó el Porfiriato?",
                 answerd: "El Porfiriato terminó debido a varios factores: el descontento social por la extrema desigualdad, la represión política que impedía la participación democrática, la crisis económica de 1907-1908, el despojo de tierras a comunidades indígenas y campesinas, la falta de libertades políticas, y finalmente el estallido de la Revolución Mexicana en 1910 liderada inicialmente por Francisco I. Madero, que culminó con la renuncia de Díaz en mayo de 1911.",
                 keywords: ["termino", "descontento", "social", "desigualdad", "represion", "politica", "crisis", "economica", "1907", "1908", "tierras", "indigenas", "campesinas", "libertades", "revolucion", "mexicana", "1910", "madero", "renuncia", "1911"]
+            }
+        ]
+    },
+    {
+        subtheme: "imperio_romano",
+        title: "Imperio Romano",
+        description: "Civilización que dominó gran parte de Europa, el norte de África y Medio Oriente desde el siglo I a.C. hasta su caída en el siglo V d.C.",
+        questions: [
+            {
+                question: "¿Qué fue el Imperio Romano?",
+                answerd: "Fue una de las civilizaciones más poderosas de la antigüedad, surgida en Roma, que se expandió por Europa, Asia y África, caracterizada por su ejército, leyes, arquitectura y cultura.",
+                keywords: ["Imperio Romano", "Roma", "civilización", "antigüedad", "expansión"]
+            },
+            {
+                question: "¿Cuándo y cómo comenzó el Imperio Romano?",
+                answerd: "Comenzó en el año 27 a.C. cuando Octavio (Augusto) fue nombrado primer emperador tras derrotar a Marco Antonio y Cleopatra, poniendo fin a la República Romana.",
+                keywords: ["inicio", "Octavio", "Augusto", "República", "27 a.C."]
+            },
+            {
+                question: "¿Qué logros destacan del Imperio Romano?",
+                answerd: "Destacan sus caminos, acueductos, leyes (como el Derecho Romano), arquitectura (coliseos, templos), y la expansión del latín.",
+                keywords: ["logros romanos", "acueductos", "Derecho Romano", "arquitectura", "latín"]
+            },
+            {
+                question: "¿Qué causó la caída del Imperio Romano?",
+                answerd: "Factores como corrupción política, invasiones bárbaras, crisis económica y división del imperio llevaron a su caída en el año 476 d.C.",
+                keywords: ["caída", "476 d.C.", "bárbaros", "división", "crisis"]
+            },
+            {
+                question: "¿Qué influencia tiene el Imperio Romano hoy en día?",
+                answerd: "Sus leyes, idioma, arquitectura y formas de gobierno influyen aún en la cultura occidental moderna.",
+                keywords: ["influencia actual", "Derecho", "latín", "gobierno", "cultura occidental"]
+            }
+        ]
+    },
+    {
+        subtheme: "prehispanica",
+        title: "Época Prehispánica",
+        description: "Periodo anterior a la llegada de los españoles a América, caracterizado por el desarrollo de civilizaciones indígenas como mayas, aztecas e incas.",
+        questions: [
+            {
+                question: "¿Qué es la época prehispánica?",
+                answerd: "Es el periodo que abarca las civilizaciones americanas antes de la llegada de los conquistadores europeos en el siglo XVI.",
+                keywords: ["prehispánica", "civilizaciones indígenas", "antes de la conquista", "siglo XVI"]
+            },
+            {
+                question: "¿Qué culturas destacaron en Mesoamérica?",
+                answerd: "Principalmente los mayas, mexicas (aztecas), y zapotecas, quienes destacaron en agricultura, arquitectura y astronomía.",
+                keywords: ["mayas", "mexicas", "zapotecas", "mesoamérica", "culturas"]
+            },
+            {
+                question: "¿Cómo era la organización social en la época prehispánica?",
+                answerd: "Era jerárquica: gobernantes (tlatoanis), nobles, sacerdotes, guerreros, artesanos, campesinos y esclavos.",
+                keywords: ["organización social", "tlatoani", "jerarquía", "precolombina", "estructura"]
+            },
+            {
+                question: "¿Qué aportes culturales nos dejaron los pueblos prehispánicos?",
+                answerd: "Calendarios, conocimientos astronómicos, escritura jeroglífica, pirámides y una rica tradición oral.",
+                keywords: ["aportes", "astronomía", "calendario", "arquitectura", "tradición"]
+            },
+            {
+                question: "¿Cómo terminó la época prehispánica?",
+                answerd: "Con la llegada de los conquistadores españoles en 1519 y la caída de Tenochtitlan en 1521 ante Hernán Cortés.",
+                keywords: ["caída", "conquista", "1521", "Tenochtitlan", "Cortés"]
+            }
+        ]
+    },
+    {
+        subtheme: "revolucion_industrial",
+        title: "Revolución Industrial",
+        description: "Transformación económica, tecnológica y social iniciada en el siglo XVIII que marcó el paso de sociedades agrícolas a industriales.",
+        questions: [
+            {
+                question: "¿Qué fue la Revolución Industrial?",
+                answerd: "Fue un periodo de grandes cambios en la producción, gracias al uso de máquinas, fábricas y nuevas fuentes de energía como el vapor, iniciando en Inglaterra en el siglo XVIII.",
+                keywords: ["Revolución Industrial", "máquinas", "fábricas", "Inglaterra", "siglo XVIII"]
+            },
+            {
+                question: "¿Qué inventos se destacaron durante esta revolución?",
+                answerd: "La máquina de vapor, el telar mecánico, locomotoras, barcos de vapor y más tarde, la electricidad.",
+                keywords: ["inventos", "máquina de vapor", "telar", "locomotora", "electricidad"]
+            },
+            {
+                question: "¿Qué consecuencias sociales trajo la Revolución Industrial?",
+                answerd: "Migración del campo a la ciudad, surgimiento del proletariado, explotación laboral y cambios en las condiciones de vida.",
+                keywords: ["consecuencias", "proletariado", "urbanización", "trabajo", "explotación"]
+            },
+            {
+                question: "¿Qué industrias se desarrollaron más durante la Revolución Industrial?",
+                answerd: "La textil, metalúrgica, del carbón y transporte, como ferrocarriles.",
+                keywords: ["industria textil", "metalurgia", "carbón", "ferrocarril", "industria"]
+            },
+            {
+                question: "¿Cómo cambió la economía tras la Revolución Industrial?",
+                answerd: "Pasó de artesanal a mecanizada, aumentando la producción, el comercio y el capitalismo.",
+                keywords: ["economía", "mecanización", "producción", "capitalismo", "comercio"]
+            }
+        ]
+    },
+    {
+        subtheme: "edad_media",
+        title: "Edad Media",
+        description: "Etapa histórica entre la caída del Imperio Romano y el Renacimiento, caracterizada por el feudalismo, la Iglesia y los reinos medievales.",
+        questions: [
+            {
+                question: "¿Cuándo comenzó y terminó la Edad Media?",
+                answerd: "Comenzó en el año 476 d.C. con la caída del Imperio Romano de Occidente y terminó en 1492 con el descubrimiento de América o en 1453 con la caída de Constantinopla.",
+                keywords: ["Edad Media", "476", "1492", "1453", "caída Roma", "época medieval"]
+            },
+            {
+                question: "¿Qué es el feudalismo?",
+                answerd: "Sistema político, económico y social basado en la posesión de tierras, donde el señor feudal ofrecía protección a cambio de trabajo o lealtad.",
+                keywords: ["feudalismo", "señores feudales", "vasallos", "tierras", "sistema medieval"]
+            },
+            {
+                question: "¿Cuál era el rol de la Iglesia en la Edad Media?",
+                answerd: "La Iglesia tenía poder religioso y político, controlaba la educación y muchas decisiones sociales.",
+                keywords: ["Iglesia", "religión", "poder", "monasterios", "influencia"]
+            },
+            {
+                question: "¿Qué fueron las cruzadas?",
+                answerd: "Expediciones militares organizadas por la Iglesia para recuperar Tierra Santa del control musulmán, entre los siglos XI y XIII.",
+                keywords: ["cruzadas", "Tierra Santa", "Iglesia", "guerras religiosas", "siglo XI"]
+            },
+            {
+                question: "¿Qué avances hubo en la Edad Media?",
+                answerd: "Se crearon universidades, se perfeccionó la agricultura, surgieron gremios y se preservó conocimiento antiguo en monasterios.",
+                keywords: ["avances", "universidades", "gremios", "agricultura", "conocimiento"]
             }
         ]
     }
@@ -1127,6 +1383,70 @@ const Astronomia = [
             }
         ]
     },
+    {
+        subtheme: "agujeros_negros",
+        title: "Agujeros Negros",
+        description: "Regiones del espacio con una gravedad tan intensa que nada, ni siquiera la luz, puede escapar de ellas.",
+        questions: [
+            {
+                question: "¿Qué es un agujero negro?",
+                answerd: "Un agujero negro es una región del espacio donde la gravedad es tan fuerte que ni la luz puede escapar. Se forma cuando una estrella muy masiva colapsa bajo su propia gravedad al final de su vida.",
+                keywords: ["agujero negro", "gravedad", "colapso estelar", "espacio", "estrella"]
+            },
+            {
+                question: "¿Cómo se forman los agujeros negros?",
+                answerd: "Generalmente se forman cuando una estrella muy masiva agota su combustible nuclear y su núcleo colapsa, generando una singularidad rodeada por un horizonte de eventos.",
+                keywords: ["formación agujero negro", "colapso", "estrella", "singularidad", "horizonte de eventos"]
+            },
+            {
+                question: "¿Qué es el horizonte de eventos?",
+                answerd: "Es el límite alrededor del agujero negro a partir del cual nada puede escapar, ni siquiera la luz. Es el punto de no retorno.",
+                keywords: ["horizonte de eventos", "agujero negro", "luz", "límite", "gravedad"]
+            },
+            {
+                question: "¿Existen diferentes tipos de agujeros negros?",
+                answerd: "Sí, existen los agujeros negros estelares, supermasivos e intermedios. Los supermasivos se encuentran en el centro de la mayoría de las galaxias.",
+                keywords: ["tipos de agujeros negros", "estelares", "supermasivos", "intermedios", "galaxias"]
+            },
+            {
+                question: "¿Cómo se detectan los agujeros negros si no emiten luz?",
+                answerd: "Se detectan por sus efectos sobre la materia cercana, como el movimiento de estrellas o la emisión de rayos X cuando absorben gas.",
+                keywords: ["detección agujero negro", "rayos X", "gravedad", "materia", "efectos"]
+            }
+        ]
+    },
+    {
+        subtheme: "meteoros",
+        title: "Meteoros",
+        description: "Fragmentos de roca o metal que entran a gran velocidad en la atmósfera terrestre, generando una luz brillante al quemarse.",
+        questions: [
+            {
+                question: "¿Qué es un meteoro?",
+                answerd: "Un meteoro es el destello de luz que vemos cuando un fragmento de roca o metal del espacio entra en la atmósfera terrestre y se quema por la fricción con el aire.",
+                keywords: ["meteoro", "atmósfera", "fuego", "fricción", "espacio"]
+            },
+            {
+                question: "¿Cuál es la diferencia entre meteoro, meteorito y meteoroide?",
+                answerd: "Un meteoroide es el objeto en el espacio, el meteoro es el destello al entrar en la atmósfera, y un meteorito es lo que llega a la superficie de la Tierra.",
+                keywords: ["meteoroide", "meteoro", "meteorito", "diferencias", "espacio"]
+            },
+            {
+                question: "¿Qué causa las lluvias de meteoros?",
+                answerd: "Son causadas por restos de cometas que la Tierra atraviesa en su órbita. Al entrar en la atmósfera, estos restos se queman y producen múltiples meteoros visibles.",
+                keywords: ["lluvia de meteoros", "cometas", "órbita terrestre", "fragmentos", "evento astronómico"]
+            },
+            {
+                question: "¿Pueden los meteoros representar un peligro?",
+                answerd: "Generalmente no, ya que la mayoría se desintegra en la atmósfera. Sin embargo, los meteoritos grandes pueden causar daño si impactan la Tierra.",
+                keywords: ["peligro meteoro", "impacto", "atmosfera", "meteorito", "daño"]
+            },
+            {
+                question: "¿Dónde es más probable observar meteoros?",
+                answerd: "En lugares alejados de la contaminación lumínica, durante la noche y especialmente durante lluvias de meteoros como las Perseidas o las Leónidas.",
+                keywords: ["observar meteoros", "cielo nocturno", "lluvias", "Perseidas", "Leónidas"]
+            }
+        ]
+    }
 ]
 
 const CulturaFriky = [
