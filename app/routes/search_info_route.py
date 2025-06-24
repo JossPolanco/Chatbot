@@ -1,6 +1,6 @@
+from fuzzywuzzy import process
 from flask import Blueprint, jsonify
 from app.models.chatbotQAModel import ChatbotQAModel
-from app.utils.coincidende_cheker import check_coincidences, check_one_coincidece
 
 bp = Blueprint('search_info_route', __name__)
 
@@ -19,12 +19,23 @@ def get_all_questions(topic):
 
 @bp.route("/search_info/<string:topic>/<string:user_question>", methods=["POST"])
 def search_info(topic, user_question):
+    best_coincidence_list = []
     # gets all the questions of a specific topic
-    questions = chatbotModel.get_questions(topic)
-    question = check_one_coincidece(user_question, questions)
-    if not questions:
-        # ckecks if there are coincidences and returns the mosts ones
-        topic_questions = check_coincidences(user_question, questions)
+    question_list = chatbotModel.get_questions(topic)
+    
+    # first check if the questions is 100% exact to the question in the db
+    best_coincidence = process.extractOne(user_question, question_list)
+    
+    print('COINCIDENCIA DEL 100%: ', best_coincidence)  
+    
+    # check if the there is a coincidence and if the coincidence is of 100%
+    if best_coincidence is not None and best_coincidence[1] == 100:
+        pass
+    else:
+        # ckecks if there are coincidences and returns the mosts ones        
+        best_coincidence_list = process.extract(user_question, question_list)
+        print('NO COINCIDIO DEL TODO ASI QUE:: ')  
+        print('LISTA DE COINCIDENCIAS: ', best_coincidence_list)  
         
 
-    return jsonify({'coincidence': topic_questions})
+    return jsonify({'coincidence': best_coincidence_list})
