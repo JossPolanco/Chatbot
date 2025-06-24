@@ -21,9 +21,10 @@ def get_all_questions(topic):
 def search_info(topic, user_question):
     # gets all the questions of a specific topic
     questions = chatbotModel.get_questions(topic)
-    # ckecks if there are coincidences and returns the mosts ones
-    topic_questions = check_coincidences(user_question, questions)
-    
-    print(topic_questions)
+    question = check_one_coincidece(user_question, questions)
+    if not questions:
+        # ckecks if there are coincidences and returns the mosts ones
+        topic_questions = check_coincidences(user_question, questions)
+        
 
     return jsonify({'coincidence': topic_questions})
