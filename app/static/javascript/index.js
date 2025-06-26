@@ -21,17 +21,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
         console.log('Topic: ', data.topic, 'Question: ', data.question)
 
-        call(data);
+        getResponse(data).then(result => {
+            console.log('RESPUESTA: ', result)
+            drawConversation(result)
+        })
+
+
     })
     
-    async function call(data) {
-        const response = await fetch(`/search_info/${data.topic}/${data.question}`, {
+    async function getResponse(data) {
+        let response = await fetch(`/search_info/${data.topic}/${data.question}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },            
         });
 
-        console.log(response);
+        let result = await response.json()
+
+        return result
+    }
+
+    function drawConversation(result){
+        if(result.status == 200){
+            console.log('SI SE PUDO')
+        } else {
+            console.log('NO SE PUDO')
+        }
     }
 })
