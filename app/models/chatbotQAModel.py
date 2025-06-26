@@ -84,7 +84,7 @@ class ChatbotQAModel():
             pipeline = [
                 {'$unwind': '$questions'},
                 {'$match': {'questions.question': question[0]}},
-                {'$project': {'id': 1, 'title': '$title', 'subtheme': '$subtheme', 'question': 'questions.question', 'answerd': '$questions.answerd', }}
+                {'$project': {'id': 1, 'title': '$title', 'subtheme': '$subtheme', 'question': '$questions.question', 'answerd': '$questions.answerd', }}
             ]
             # do the aggregate with the pipeline and its converted to a list
             list_answers = list(collection.aggregate(pipeline))
@@ -94,6 +94,6 @@ class ChatbotQAModel():
 
         # return the result
         if result:
-            return result[0]
+            return result
         else:
             return None
