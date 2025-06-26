@@ -24,6 +24,7 @@ def search_info(topic, user_question):
     question_list_response = []
     best_coincidence_list = []
     answer_list_response = []
+    subthemes_list = []
     
     # gets all the questions of a specific topic
     question_list = chatbotModel.get_questions(topic)
@@ -48,6 +49,8 @@ def search_info(topic, user_question):
         
         # gets all possible answers
         answers = chatbotModel.get_possible_answers(topic, best_coincidence_list)
+        
+        print(f'{Fore.RED}Las respuestas son: ', answers)
         
         # if there is answers, save each question and answers separated
         if answers:

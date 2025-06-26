@@ -19,14 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
             'question': questionToSearch
         }
 
-        console.log('Topic: ', data.topic, 'Question: ', data.question)
-
         getResponse(data).then(result => {
-            console.log('RESPUESTA: ', result)
-            drawConversation(result)
+            drawConversation(questionToSearch, result)
         })
-
-
     })
     
     async function getResponse(data) {
@@ -38,15 +33,55 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         let result = await response.json()
+        console.log(result)
+
 
         return result
     }
 
-    function drawConversation(result){
+    function drawConversation(questionToSearch, result){
+        const chat_container = document.getElementById('chat_container');
+        const question = document.createElement('div')
+
+        question.className = ''
+
+        question.innerHTML = `
+        <div class="">
+            <div class="bg-blue-400 max-w-md p-3 rounded-2xl justify-self-end">${questionToSearch}</div>
+        </div>`
+
+            chat_container.appendChild(question)
+
         if(result.status == 200){
-            console.log('SI SE PUDO')
-        } else {
-            console.log('NO SE PUDO')
+            const answer = document.createElement('div')
+            if(result.mode == 'unique'){
+
+                answer.className = ''
+
+                answer.innerHTML = `
+                <div class="">
+                    <div class="bg-purple-400 justify-start max-w-md p-3 rounded-2xl">${result.answer}</div>
+                </div>`
+
+                chat_container.appendChild(answer);
+            } else if(result.mode == 'multiple'){
+                let init_phrase = 'No encontre exactamente lo que buscas, pero aqui tienes algunos temas relacionados:<br><br>'
+                let full_response = ''
+                for (let i = 0; i < result.questions.length; i++) {
+                    full_response += `<strong>Pregunta:</strong> ${result.questions[i]}<br>`;
+                    full_response += `<strong>Respuesta:</strong> ${result.answers[i]}<br><br>`;
+                }
+
+                let final_response = init_phrase + full_response
+
+                answer.className = ''
+
+                answer.innerHTML = `
+                <div class="">
+                    <div class="bg-purple-400 justify-start max-w-md p-3 rounded-2xl">${final_response}</div>
+                </div>`
+                chat_container.appendChild(answer);
+            }
         }
     }
 })
