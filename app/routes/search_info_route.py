@@ -26,16 +26,27 @@ def search_info(topic, user_question):
     # first check if the questions is 100% exact to the question in the db
     best_coincidence = process.extractOne(user_question, question_list)
     
-    print('COINCIDENCIA DEL 100%: ', best_coincidence)  
-    
     # check if the there is a coincidence and if the coincidence is of 100%
     if best_coincidence is not None and best_coincidence[1] == 100:
-        pass
+        # gets the answer
+        answer = chatbotModel.get_one_answer(topic, best_coincidence)
+        
+        if answer:
+            # return a json with the answer
+            return jsonify({'status': 200,'answer': answer})
+        else:
+            # return a json with a error code
+            return jsonify({'status': 404})
     else:
         # ckecks if there are coincidences and returns the mosts ones        
         best_coincidence_list = process.extract(user_question, question_list)
-        print('NO COINCIDIO DEL TODO ASI QUE:: ')  
-        print('LISTA DE COINCIDENCIAS: ', best_coincidence_list)  
         
-
-    return jsonify({'coincidence': best_coincidence_list})
+        answers = chatbotModel.get_possible_answers(topic, best_coincidence_list)
+        
+        if answers:
+            # return a json with all the possible answers
+            return jsonify({'status': 200 ,'list_answers': answers})
+        else:
+            # return a json with a error code
+            return jsonify({'status': 404})
+    
