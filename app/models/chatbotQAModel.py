@@ -53,9 +53,47 @@ class ChatbotQAModel():
         
         return questions
     
-    def find_answerd(self, topic):
+    def get_one_answer(self, topic, question):
+        # gets all the collection
         collection = get_collection(topic)
-        documents = collection.find().limit(2)
         
-        # print_document(documents)
-    
+        # pipeline to bring the specific information that we need
+        pipeline = [
+            {'$unwind': '$questions'},
+            {'$match': {'questions.question': question[0]}},
+            {'$project': {'id': 1, 'title': '$title', 'subtheme': '$subtheme', 'question': 'questions.question', 'answerd': '$questions.answerd', }}
+        ]
+        # do the aggregate with the pipeline and its converted to a list
+        result = list(collection.aggregate(pipeline))
+        
+        # return the result
+        if result:
+            return result[0]
+        else:
+            return None
+
+    def get_possible_answers(self, topic, questions):
+        # gets all the collection
+        collection = get_collection(topic)
+        
+        # list of all the possible answers to all possible questions
+        result = []
+        
+        # pipeline to bring the specific information that we need
+        for question in questions:
+            pipeline = [
+                {'$unwind': '$questions'},
+                {'$match': {'questions.question': question[0]}},
+                {'$project': {'id': 1, 'title': '$title', 'subtheme': '$subtheme', 'question': '$questions.question', 'answerd': '$questions.answerd', }}
+            ]
+            # do the aggregate with the pipeline and its converted to a list
+            list_answers = list(collection.aggregate(pipeline))
+            
+            # append each result in the list
+            result.append(list_answers)
+
+        # return the result
+        if result:
+            return result
+        else:
+            return None
