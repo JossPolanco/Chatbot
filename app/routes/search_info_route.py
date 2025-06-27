@@ -1,7 +1,9 @@
 from fuzzywuzzy import process
 from flask import Blueprint, jsonify
+from colorama import Fore, Style, init
 from app.models.chatbotQAModel import ChatbotQAModel
 
+init(autoreset=True)
 bp = Blueprint('search_info_route', __name__)
 
 # list of all the topics
@@ -19,7 +21,10 @@ def get_all_questions(topic):
 
 @bp.route("/search_info/<string:topic>/<string:user_question>", methods=["POST"])
 def search_info(topic, user_question):
+    question_list_response = []
     best_coincidence_list = []
+    answer_list_response = []
+    
     # gets all the questions of a specific topic
     question_list = chatbotModel.get_questions(topic)
     
@@ -33,7 +38,7 @@ def search_info(topic, user_question):
         
         if answer:
             # return a json with the answer
-            return jsonify({'status': 200,'answer': answer})
+            return jsonify({'status': 200, 'mode': 'unique', 'answer': answer['answerd']})
         else:
             # return a json with a error code
             return jsonify({'status': 404})
@@ -41,11 +46,21 @@ def search_info(topic, user_question):
         # ckecks if there are coincidences and returns the mosts ones        
         best_coincidence_list = process.extract(user_question, question_list)
         
+        # gets all possible answers
         answers = chatbotModel.get_possible_answers(topic, best_coincidence_list)
         
+        print(f'{Fore.RED}Las respuestas son: ', answers)
+        
+        # if there is answers, save each question and answers separated
         if answers:
+            for answer in answers:
+                # save each question
+                question_list_response.append(answer[0]['question'])
+                # save each answer
+                answer_list_response.append( answer[0]['answerd'])
+            
             # return a json with all the possible answers
-            return jsonify({'status': 200 ,'list_answers': answers})
+            return jsonify({'status': 200 , 'mode': 'multiple', 'questions': question_list_response, 'answers': answer_list_response})
         else:
             # return a json with a error code
             return jsonify({'status': 404})
