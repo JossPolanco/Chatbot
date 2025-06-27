@@ -103,10 +103,13 @@ class ChatbotQAModel():
     def insert_history(self, answer):
         collection = get_collection('historial')
         
+        # creates the current date when it was used the search 
         current_date = dt.datetime.now()
         
+        # add format to the current date
         formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
         
+        # create the document to be inserted
         to_insert = {
             'Fecha': formatted_date,
             'Titulo': answer['title'],
@@ -114,19 +117,19 @@ class ChatbotQAModel():
             'Respuesta': answer['answerd']
         }
         
+        # insertion into the history collection
         collection.insert_one(to_insert)
     
     def insert_multiple_history(self, title_list, question_list_response, answer_list_response):
-        print(f'{Fore.BLUE} RESPUESTA ENTERA: ', title_list)
-        print(f'{Fore.BLUE} PREGUNTAS: ', question_list_response)
-        print(f'{Fore.BLUE} RESPUESTAS: ', answer_list_response)
-        
         collection = get_collection('historial')
         
+        # creates the current date when it was used the search 
         current_date = dt.datetime.now()
         
+        # add format to the current date
         formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
         
+        # create the document to be inserted
         to_insert = {
             'Fecha': formatted_date,
             'Titulo': title_list,
@@ -134,5 +137,15 @@ class ChatbotQAModel():
             'Respuesta': answer_list_response
         }
         
+        # insertion into the history collection
         collection.insert_one(to_insert)
+    
+    def get_history(self):
+        collection = get_collection('historial')
         
+        # brings everything of each document except the id
+        history = list(collection.find({}, {'_id': 0}))
+        
+        print(f'{Fore.CYAN}Historial: ', history)
+        
+        return history

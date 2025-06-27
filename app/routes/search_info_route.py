@@ -80,6 +80,11 @@ def search_info(topic, user_question):
             # return a json with a error code
             return jsonify({'status': 404})
 
-# @bp.route('/get-history', methods=['POST'])
-# def get_history():
-#     pass
+@bp.route('/get-history', methods=['GET'])
+def get_history():
+    
+    # calls the function to get all the history
+    history = chatbotModel.get_history()
+    
+    # return a json with the 
+    return jsonify({'status': 200, 'history:': history})

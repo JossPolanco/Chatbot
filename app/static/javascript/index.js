@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     async function getHistory(){
         let response = await fetch(`/get-history`, {
-            method: 'POST',
+            method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
             }
