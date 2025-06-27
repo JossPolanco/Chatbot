@@ -78,8 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 let phrase = init_phrase[randomIndex];
                 
                 for (let i = 0; i < result.questions.length; i++) {
-                    full_response += `<strong>Pregunta:</strong> ${result.questions[i]}<br>`;
-                    full_response += `<strong>Respuesta:</strong> ${result.answers[i]}<br><br>`;
+                    full_response += `<strong>${result.questions[i]}</strong><br>`;
+                    full_response += `${result.answers[i]}<br><br>`;
                 }
 
                 let final_response = phrase + full_response
