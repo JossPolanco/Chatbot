@@ -87,4 +87,4 @@ def get_history():
     history = chatbotModel.get_history()
     
     # return a json with the 
-    return jsonify({'status': 200, 'history:': history})
+    return jsonify({'status': 200, 'history': history})
