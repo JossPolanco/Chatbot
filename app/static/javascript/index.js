@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const chat_container = document.getElementById('chat_container');
         const question = document.createElement('div')
         const init_phrase = ['No encontre exactamente lo que buscas, pero aqui tienes algunos temas relacionados:<br><br>', 'No encontré una coincidencia exacta para tu pregunta, pero aquí tienes algunas respuestas relacionadas que podrían ayudarte:<br><br>', 'No logré encontrar una respuesta exacta, pero estas opciones podrían ser útiles para ti:<br><br>', 'No tengo una respuesta exacta, pero encontré información relacionada que podría interesarte:<br><br>', 'No pude hallar una coincidencia perfecta, pero aquí tienes algunas preguntas y respuestas similares:<br><br>']
+        const not_answer_phrases = ['Nambre no, ahí muere.', 'Si Dios no sabe, menos yo.', 'No te entendí, escribe bien.', 'No encontré coincidencias sobre lo que estás buscando.', 'Nono papito, ahí la dejamos.', 'Sepa que quieres.']
 
         question.className = 'flex justify-end mb-4 items-center gap-3'
 
@@ -95,6 +96,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>`
                 chat_container.appendChild(answer);
             }
+        } else if(result.status == 404){
+            const answer = document.createElement('div')
+
+            let randomIndex = Math.floor(Math.random() * init_phrase.length);
+            let phrase = not_answer_phrases[randomIndex];
+
+            answer.className = 'flex justify-start mb-4 items gap-3'
+
+                answer.innerHTML = `
+                <div class="flex size-15 bg-white border-2 border-gray-300 justify-center items-center rounded-full">                    
+                    <i class="fa-solid fa-robot fa-2xl" style="color: #2e5fb2;"></i>
+                </div>
+                <div class="">
+                    <div class="bg-indigo-400 text-white rounded-2xl px-4 py-2 max-w-md shadow">${phrase}</div>
+                </div>
+                `
+                chat_container.appendChild(answer);
         }
         chat_container.scrollTop = chat_container.scrollHeight;
     }

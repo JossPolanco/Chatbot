@@ -24,6 +24,7 @@ def search_info(topic, user_question):
     question_list_response = []
     best_coincidence_list = []
     answer_list_response = []
+    final_questions = []
     
     # gets all the questions of a specific topic
     question_list = chatbotModel.get_questions(topic)
@@ -45,6 +46,14 @@ def search_info(topic, user_question):
     else:
         # ckecks if there are coincidences and returns the mosts ones        
         best_coincidence_list = process.extract(user_question, question_list)
+        
+        # ensure that coincidences are higher than the 80%
+        for coincidence in best_coincidence_list:
+            if coincidence[1] >= 80:
+                final_questions.append(coincidence[0])
+        
+        if not final_questions:
+            return jsonify({'status': 404})
         
         # gets all possible answers
         answers = chatbotModel.get_possible_answers(topic, best_coincidence_list)
