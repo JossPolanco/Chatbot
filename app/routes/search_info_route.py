@@ -38,6 +38,9 @@ def search_info(topic, user_question):
         answer = chatbotModel.get_one_answer(topic, best_coincidence)
         
         if answer:
+            # insert the answer in the history collection
+            chatbotModel.insert_history(answer)
+            
             # return a json with the answer
             return jsonify({'status': 200, 'mode': 'unique', 'answer': answer['answerd']})
         else:
@@ -73,4 +76,7 @@ def search_info(topic, user_question):
         else:
             # return a json with a error code
             return jsonify({'status': 404})
-    
+
+# @bp.route('/get-history', methods=['POST'])
+# def get_history():
+#     pass

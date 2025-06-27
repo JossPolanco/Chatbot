@@ -1,3 +1,5 @@
+import datetime as dt
+from colorama import Fore, Style, init
 from app.utils.db_utils import get_db, get_collection, print_document
 class ChatbotQAModel():
     def __init__(self) -> None:
@@ -61,7 +63,7 @@ class ChatbotQAModel():
         pipeline = [
             {'$unwind': '$questions'},
             {'$match': {'questions.question': question[0]}},
-            {'$project': {'id': 1, 'title': '$title', 'subtheme': '$subtheme', 'question': 'questions.question', 'answerd': '$questions.answerd', }}
+            {'$project': {'id': 1, 'title': '$title', 'subtheme': '$subtheme', 'question': '$questions.question', 'answerd': '$questions.answerd', }}
         ]
         # do the aggregate with the pipeline and its converted to a list
         result = list(collection.aggregate(pipeline))
@@ -97,3 +99,19 @@ class ChatbotQAModel():
             return result
         else:
             return None
+    
+    def insert_history(self, answer):
+        collection = get_collection('historial')
+        
+        current_date = dt.datetime.now()
+        
+        formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
+        
+        to_insert = {
+            'Fecha': formatted_date,
+            'Titulo': answer['title'],
+            'Pregunta': answer['question'],
+            'Respuesta': answer['answerd']
+        }
+        
+        collection.insert_one(to_insert)

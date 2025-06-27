@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const send_btn = document.getElementById('send_btn');
     const question_input = document.getElementById('question_input');
+    const history_btn = document.getElementById('history_btn')
     let topic = '';
     
     send_btn.addEventListener('click', function() {
@@ -22,8 +23,29 @@ document.addEventListener('DOMContentLoaded', function () {
         getResponse(data).then(result => {
             drawConversation(questionToSearch, result)
         })
-    })
+    });
+
+    history_btn.addEventListener('click', function() {
+        getHistory().then(history => {
+            drawHistory(history);
+        })
+    });
     
+    async function getHistory(){
+        let response = await fetch(`/get-history`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+
+        let history = await response.json();
+
+        console.log('HISTORIAL', history);
+
+        return history
+    }
+
     async function getResponse(data) {
         let response = await fetch(`/search_info/${data.topic}/${data.question}`, {
             method: 'POST',
@@ -104,16 +126,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
             answer.className = 'flex justify-start mb-4 items gap-3'
 
-                answer.innerHTML = `
-                <div class="flex size-15 bg-white border-2 border-gray-300 justify-center items-center rounded-full">                    
-                    <i class="fa-solid fa-robot fa-2xl" style="color: #2e5fb2;"></i>
-                </div>
-                <div class="">
-                    <div class="bg-indigo-400 text-white rounded-2xl px-4 py-2 max-w-md shadow">${phrase}</div>
-                </div>
-                `
-                chat_container.appendChild(answer);
+            answer.innerHTML = `
+            <div class="flex size-15 bg-white border-2 border-gray-300 justify-center items-center rounded-full">                    
+                <i class="fa-solid fa-robot fa-2xl" style="color: #2e5fb2;"></i>
+            </div>
+            <div class="">
+                <div class="bg-indigo-400 text-white rounded-2xl px-4 py-2 max-w-md shadow">${phrase}</div>
+            </div>
+            `
+            chat_container.appendChild(answer);
         }
         chat_container.scrollTop = chat_container.scrollHeight;
+    }
+
+    function drawHistory(history){
+        const chat_container = document.getElementById('chat_container');
+        chat_container.innerHTML = ``
+
+        const history_container = document.createElement('div');
+
+        history_container.className = 'flex justify-start mb-4 items gap-3'
+
+        history_container.innerHTML = `
+            <div class="">
+                <div class="bg-indigo-400 text-white rounded-2xl px-4 py-2 max-w-md shadow">MY HISTORIAL</div>
+            </div>
+            `
+        chat_container.appendChild(history_container);
     }
 })
