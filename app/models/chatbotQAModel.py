@@ -115,3 +115,24 @@ class ChatbotQAModel():
         }
         
         collection.insert_one(to_insert)
+    
+    def insert_multiple_history(self, title_list, question_list_response, answer_list_response):
+        print(f'{Fore.BLUE} RESPUESTA ENTERA: ', title_list)
+        print(f'{Fore.BLUE} PREGUNTAS: ', question_list_response)
+        print(f'{Fore.BLUE} RESPUESTAS: ', answer_list_response)
+        
+        collection = get_collection('historial')
+        
+        current_date = dt.datetime.now()
+        
+        formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
+        
+        to_insert = {
+            'Fecha': formatted_date,
+            'Titulo': title_list,
+            'Pregunta': question_list_response,
+            'Respuesta': answer_list_response
+        }
+        
+        collection.insert_one(to_insert)
+        

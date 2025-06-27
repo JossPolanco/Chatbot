@@ -25,6 +25,7 @@ def search_info(topic, user_question):
     best_coincidence_list = []
     answer_list_response = []
     final_questions = []
+    title_list = []
     
     # gets all the questions of a specific topic
     question_list = chatbotModel.get_questions(topic)
@@ -61,16 +62,18 @@ def search_info(topic, user_question):
         # gets all possible answers
         answers = chatbotModel.get_possible_answers(topic, best_coincidence_list)
         
-        print(f'{Fore.RED}Las respuestas son: ', answers)
-        
         # if there is answers, save each question and answers separated
         if answers:
             for answer in answers:
                 # save each question
                 question_list_response.append(answer[0]['question'])
                 # save each answer
-                answer_list_response.append( answer[0]['answerd'])
+                answer_list_response.append(answer[0]['answerd'])
+                # save each title
+                title_list.append(answer[0]['title'])
             
+            # insert the answer in the history collection
+            chatbotModel.insert_multiple_history(title_list, question_list_response, answer_list_response)
             # return a json with all the possible answers
             return jsonify({'status': 200 , 'mode': 'multiple', 'questions': question_list_response, 'answers': answer_list_response})
         else:
