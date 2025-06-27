@@ -42,46 +42,60 @@ document.addEventListener('DOMContentLoaded', function () {
     function drawConversation(questionToSearch, result){
         const chat_container = document.getElementById('chat_container');
         const question = document.createElement('div')
+        const init_phrase = ['No encontre exactamente lo que buscas, pero aqui tienes algunos temas relacionados:<br><br>', 'No encontré una coincidencia exacta para tu pregunta, pero aquí tienes algunas respuestas relacionadas que podrían ayudarte:<br><br>', 'No logré encontrar una respuesta exacta, pero estas opciones podrían ser útiles para ti:<br><br>', 'No tengo una respuesta exacta, pero encontré información relacionada que podría interesarte:<br><br>', 'No pude hallar una coincidencia perfecta, pero aquí tienes algunas preguntas y respuestas similares:<br><br>']
 
-        question.className = ''
+        question.className = 'flex justify-end mb-4 items-center gap-3'
 
         question.innerHTML = `
         <div class="">
-            <div class="bg-blue-400 max-w-md p-3 rounded-2xl justify-self-end">${questionToSearch}</div>
+            <div class="bg-blue-500 text-white rounded-2xl px-4 py-2 max-w-md shadow">${questionToSearch}</div>
+        </div>
+        <div class="flex size-15 bg-white border-2 border-gray-300 justify-center items-center rounded-full">
+            <i class="fa-solid fa-user fa-2xl" style="color: #2e5fb2;"></i>
         </div>`
 
-            chat_container.appendChild(question)
+        chat_container.appendChild(question)
 
         if(result.status == 200){
             const answer = document.createElement('div')
             if(result.mode == 'unique'){
 
-                answer.className = ''
+                answer.className = 'flex justify-start mb-4 items gap-3'
 
                 answer.innerHTML = `
+                <div class="flex size-15 bg-white border-2 border-gray-300 justify-center items-center rounded-full">                    
+                    <i class="fa-solid fa-robot fa-2xl" style="color: #2e5fb2;"></i>
+                </div>
                 <div class="">
-                    <div class="bg-purple-400 justify-start max-w-md p-3 rounded-2xl">${result.answer}</div>
-                </div>`
+                    <div class="bg-indigo-400 text-white rounded-2xl px-4 py-2 max-w-md shadow">${result.answer}</div>
+                </div>
+                `
 
                 chat_container.appendChild(answer);
-            } else if(result.mode == 'multiple'){
-                let init_phrase = 'No encontre exactamente lo que buscas, pero aqui tienes algunos temas relacionados:<br><br>'
+            } else if(result.mode == 'multiple'){                
                 let full_response = ''
+                let randomIndex = Math.floor(Math.random() * init_phrase.length);
+                let phrase = init_phrase[randomIndex];
+                
                 for (let i = 0; i < result.questions.length; i++) {
                     full_response += `<strong>Pregunta:</strong> ${result.questions[i]}<br>`;
                     full_response += `<strong>Respuesta:</strong> ${result.answers[i]}<br><br>`;
                 }
 
-                let final_response = init_phrase + full_response
+                let final_response = phrase + full_response
 
-                answer.className = ''
+                answer.className = 'flex justify-start mb-4 items gap-3'
 
                 answer.innerHTML = `
+                <div class="flex size-15 bg-white border-2 border-gray-300 justify-center items-center rounded-full">
+                    <i class="fa-solid fa-robot fa-2xl" style="color: #2e5fb2;"></i>                    
+                </div>
                 <div class="">
-                    <div class="bg-purple-400 justify-start max-w-md p-3 rounded-2xl">${final_response}</div>
+                    <div class="bg-indigo-400 text-white rounded-2xl px-4 py-2 max-w-md shadow">${final_response}</div>
                 </div>`
                 chat_container.appendChild(answer);
             }
         }
+        chat_container.scrollTop = chat_container.scrollHeight;
     }
 })
