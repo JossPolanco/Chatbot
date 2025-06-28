@@ -11,80 +11,98 @@ topics = ['anatomia', 'artes', 'astronomia', 'automoviles', 'biologia', 'cultura
 
 chatbotModel = ChatbotQAModel()
 
-@bp.route('/get-all-questions/<string:topic>', methods=['POST'])
-def get_all_questions(topic):    
-    # gest all the questions related of the topic
-    obtained_questions = chatbotModel.get_questions(topic)
-    # return a json with the questions
-    return jsonify({'all_questions': obtained_questions})
+@bp.route('/get-all-questions/<string:topic>', methods=['GET'])
+def get_all_questions(topic):
+    try:
+        # gest all the questions related of the topic
+        obtained_questions = chatbotModel.get_questions(topic)
+        # return a json with the questions
+        return jsonify({'status': 200, 'all_questions': obtained_questions})
+    except ValueError as error:
+        # print error
+        print(f'{Fore.RED}Error found: ', error)
+        # return a error code
+        return jsonify({'status': 404})
+        
 
 
 @bp.route("/search_info/<string:topic>/<string:user_question>", methods=["POST"])
 def search_info(topic, user_question):
-    question_list_response = []
-    best_coincidence_list = []
-    answer_list_response = []
-    final_questions = []
-    title_list = []
-    
-    # gets all the questions of a specific topic
-    question_list = chatbotModel.get_questions(topic)
-    
-    # first check if the questions is 100% exact to the question in the db
-    best_coincidence = process.extractOne(user_question, question_list)
-    
-    # check if the there is a coincidence and if the coincidence is of 100%
-    if best_coincidence is not None and best_coincidence[1] == 100:
-        # gets the answer
-        answer = chatbotModel.get_one_answer(topic, best_coincidence)
-        
-        if answer:
-            # insert the answer in the history collection
-            chatbotModel.insert_history(answer)
+    try:
+        question_list_response = []
+        best_coincidence_list = []
+        answer_list_response = []
+        final_questions = []
+        title_list = []
+
+        # gets all the questions of a specific topic
+        question_list = chatbotModel.get_questions(topic)
+
+        # first check if the questions is 100% exact to the question in the db
+        best_coincidence = process.extractOne(user_question, question_list)
+
+        # check if the there is a coincidence and if the coincidence is of 100%
+        if best_coincidence is not None and best_coincidence[1] == 100:
+            # gets the answer
+            answer = chatbotModel.get_one_answer(topic, best_coincidence)
             
-            # return a json with the answer
-            return jsonify({'status': 200, 'mode': 'unique', 'answer': answer['answerd']})
+            if answer:
+                # insert the answer in the history collection
+                chatbotModel.insert_history(answer)
+                
+                # return a json with the answer
+                return jsonify({'status': 200, 'mode': 'unique', 'answer': answer['answerd']})
+            else:
+                # return a json with a error code
+                return jsonify({'status': 404})
         else:
-            # return a json with a error code
-            return jsonify({'status': 404})
-    else:
-        # ckecks if there are coincidences and returns the mosts ones        
-        best_coincidence_list = process.extract(user_question, question_list)
-        
-        # ensure that coincidences are higher than the 80%
-        for coincidence in best_coincidence_list:
-            if coincidence[1] >= 80:
-                final_questions.append(coincidence[0])
-        
-        if not final_questions:
-            return jsonify({'status': 404})
-        
-        # gets all possible answers
-        answers = chatbotModel.get_possible_answers(topic, best_coincidence_list)
-        
-        # if there is answers, save each question and answers separated
-        if answers:
-            for answer in answers:
-                # save each question
-                question_list_response.append(answer[0]['question'])
-                # save each answer
-                answer_list_response.append(answer[0]['answerd'])
-                # save each title
-                title_list.append(answer[0]['title'])
+            # ckecks if there are coincidences and returns the mosts ones        
+            best_coincidence_list = process.extract(user_question, question_list)
             
-            # insert the answer in the history collection
-            chatbotModel.insert_multiple_history(title_list, question_list_response, answer_list_response)
-            # return a json with all the possible answers
-            return jsonify({'status': 200 , 'mode': 'multiple', 'questions': question_list_response, 'answers': answer_list_response})
-        else:
-            # return a json with a error code
-            return jsonify({'status': 404})
+            # ensure that coincidences are higher than the 80%
+            for coincidence in best_coincidence_list:
+                if coincidence[1] >= 80:
+                    final_questions.append(coincidence[0])
+            
+            if not final_questions:
+                return jsonify({'status': 404})
+            
+            # gets all possible answers
+            answers = chatbotModel.get_possible_answers(topic, best_coincidence_list)
+            
+            # if there is answers, save each question and answers separated
+            if answers:
+                for answer in answers:
+                    # save each question
+                    question_list_response.append(answer[0]['question'])
+                    # save each answer
+                    answer_list_response.append(answer[0]['answerd'])
+                    # save each title
+                    title_list.append(answer[0]['title'])
+                
+                # insert the answer in the history collection
+                chatbotModel.insert_multiple_history(title_list, question_list_response, answer_list_response)
+                # return a json with all the possible answers
+                return jsonify({'status': 200 , 'mode': 'multiple', 'questions': question_list_response, 'answers': answer_list_response})
+            else:
+                # return a json with a error code
+                return jsonify({'status': 404})
+    except ValueError as error:
+        # print error
+        print(f'{Fore.RED}Error found: ', error)
+        # return a error code
+        return jsonify({'status': 404})
 
 @bp.route('/get-history', methods=['GET'])
 def get_history():
-    
-    # calls the function to get all the history
-    history = chatbotModel.get_history()
-    
-    # return a json with the 
-    return jsonify({'status': 200, 'history': history})
+    try:
+        # calls the function to get all the history
+        history = chatbotModel.get_history()
+        
+        # return a json with the 
+        return jsonify({'status': 200, 'history': history})
+    except ValueError as error:
+        # print error
+        print(f'{Fore.RED}Error found: ', error)
+        # return a error code
+        return jsonify({'status': 404})
