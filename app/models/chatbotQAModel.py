@@ -1,3 +1,5 @@
+import datetime as dt
+from colorama import Fore, Style, init
 from app.utils.db_utils import get_db, get_collection, print_document
 class ChatbotQAModel():
     def __init__(self) -> None:
@@ -61,7 +63,7 @@ class ChatbotQAModel():
         pipeline = [
             {'$unwind': '$questions'},
             {'$match': {'questions.question': question[0]}},
-            {'$project': {'id': 1, 'title': '$title', 'subtheme': '$subtheme', 'question': 'questions.question', 'answerd': '$questions.answerd', }}
+            {'$project': {'id': 1, 'title': '$title', 'subtheme': '$subtheme', 'question': '$questions.question', 'answerd': '$questions.answerd', }}
         ]
         # do the aggregate with the pipeline and its converted to a list
         result = list(collection.aggregate(pipeline))
@@ -97,3 +99,53 @@ class ChatbotQAModel():
             return result
         else:
             return None
+    
+    def insert_history(self, answer):
+        collection = get_collection('historial')
+        
+        # creates the current date when it was used the search 
+        current_date = dt.datetime.now()
+        
+        # add format to the current date
+        formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
+        
+        # create the document to be inserted
+        to_insert = {
+            'Fecha': formatted_date,
+            'Titulo': answer['title'],
+            'Pregunta': answer['question'],
+            'Respuesta': answer['answerd']
+        }
+        
+        # insertion into the history collection
+        collection.insert_one(to_insert)
+    
+    def insert_multiple_history(self, title_list, question_list_response, answer_list_response):
+        collection = get_collection('historial')
+        
+        # creates the current date when it was used the search 
+        current_date = dt.datetime.now()
+        
+        # add format to the current date
+        formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
+        
+        # create the document to be inserted
+        to_insert = {
+            'Fecha': formatted_date,
+            'Titulo': title_list,
+            'Pregunta': question_list_response,
+            'Respuesta': answer_list_response
+        }
+        
+        # insertion into the history collection
+        collection.insert_one(to_insert)
+    
+    def get_history(self):
+        collection = get_collection('historial')
+        
+        # brings everything of each document except the id
+        history = list(collection.find({}, {'_id': 0}))
+        
+        print(f'{Fore.CYAN}Historial: ', history)
+        
+        return history

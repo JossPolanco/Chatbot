@@ -34,6 +34,10 @@
     padding: 0;
     margin: 0;
     background: #fff;
+	top: auto !important;
+    bottom: 100% !important;
+    margin-bottom: .5em !important;
+    margin-top: 0 !important;
 }
 
 .awesomplete > ul:empty {
@@ -70,16 +74,16 @@
 	.awesomplete > ul:before {
 		content: "";
 		position: absolute;
-		top: -.43em;
+		bottom: -.43em;
 		left: 1em;
 		width: 0; height: 0;
 		padding: .4em;
-		background: white;
+		background: rgb(99, 99, 99);
 		border: inherit;
 		border-right: 0;
 		border-bottom: 0;
-		-webkit-transform: rotate(45deg);
-		transform: rotate(45deg);
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
 	}
 
 	.awesomplete > ul > li {

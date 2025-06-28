@@ -69,3 +69,13 @@ const Cultura_mexicana = {
 const Astrologia = {
 
 }
+
+const Historial = [
+    {
+        _id: ObjectId(),
+        date: Date.now(),
+        title: 'Matematicas',
+        question: '¿Qué es la moda?',
+        answer: 'La moda es tal y tal'
+    }
+]
