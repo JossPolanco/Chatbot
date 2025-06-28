@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 async function get_questions(topic) {
     const questions_autocomplete = await fetch(`/get-all-questions/${topic}`, {
-        method: 'POST',
+        method: 'GET',
         headers: {
             'Content-Type': 'application/json'
         },        
