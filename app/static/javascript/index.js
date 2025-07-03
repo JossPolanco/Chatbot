@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             question.innerHTML = `
             <div class="">
-                <div class="bg-gradient-to-l from-cyan-600 to-blue-600 text-white rounded-2xl px-4 py-2 max-w-md shadow">${questionToSearch}</div>
+                <div class="bg-gradient-to-l from-cyan-600 to-blue-600 text-white rounded-2xl px-4 py-2 max-w-xl shadow">${questionToSearch}</div>
             </div>
             <div class="flex size-15 bg-white border-2 border-gray-300 justify-center items-center rounded-full">
                 <i class="fa-solid fa-user fa-2xl" style="color: #2e5fb2;"></i>
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <i class="fa-solid fa-robot fa-2xl" style="color: #2e5fb2;"></i>
                     </div>
                     <div class="">
-                        <div class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-2xl px-4 py-2 max-w-md shadow">${result.answer}</div>
+                        <div class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-2xl px-4 py-2 max-w-xl shadow">${result.answer}</div>
                     </div>
                     `
 
