@@ -146,6 +146,4 @@ class ChatbotQAModel():
         # brings everything of each document except the id
         history = list(collection.find({}, {'_id': 0}))
         
-        print(f'{Fore.CYAN}Historial: ', history)
-        
         return history
